@@ -1,16 +1,27 @@
 import React from 'react'
-import CarouselContent from '../component/CarouselContent'
-import Header from '../component/Header'
-import News from '../component/News'
-
+import Navbar from '../component/Navbar'
+// import Navbarr from '../component/Navbarr'
+import Product from '../component/Product'
+// import News from '../component/News'
+import Tk from '../component/Tk'
+import Sd from '../component/Sd'
+// import Form from '../component/Form'
+import Footer from '../component/Footer'
+import CarouselNews from '../component/Carousel'
 
 
 const Home = () => {
   return (
     <div>
-     <Header/>
-     <CarouselContent/>
-     <News/>
+     <Navbar/>
+     <CarouselNews/>
+     {/* <Navbarr/> */}
+     {/* <News/> */}
+     <Tk/>
+     <Sd/>
+     <Product/>
+     {/* <Form/> */}
+     <Footer/>
     </div>
   )
 }

@@ -21,8 +21,8 @@ export default function Navbar() {
                   <div className="flex space-x-4">
                   <NavLink to="/" className = " text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
                   <NavLink to="/profile" className = " text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Profile</NavLink>
-                  <NavLink to="/" className = " text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
-                  <NavLink to="/" className = " text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</NavLink>
+                  <NavLink to="/" className = " text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">SD</NavLink>
+                  <NavLink to="/" className = " text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">TK</NavLink>
                  <NavLink to="/ppdb" className = "text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">PPDB</NavLink>
                   
                   </div>

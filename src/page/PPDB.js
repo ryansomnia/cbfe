@@ -1,7 +1,29 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
+import axios from "axios";
+
+const client = axios.create({
+  baseURL: "localhost:3000" 
+});
 
 export default function PPDB() {
+
+  let {
+    namaLengkap,    jenisKelamin,    tanggalLahir,    tempatLahir,    agama,    gereja,    kewarganegaraan,    jumlahSaudara,    anakKe,    golonganDarah,    alamat,    noHandphone,    bertempatTinggal,    jarakKeSekolah,    NIK,
+    asalSekolah,    tanggalDanNoSTTBTK,    a_namaAyah,    a_pendidikanTerakhir,    a_pekerjaan,    a_alamatKantor,    a_agama,    a_gereja,    a_tempatLahir,    a_tglLahir,    a_alamatRumah,    a_noHandphone,    i_namaIbu,
+    i_pendidikanTerakhir,    i_pekerjaan,    i_alamatKantor,    i_agama,    i_gereja,    i_tempatLahir,    i_tglLahir,    i_alamatRumah,    i_noHandphone
+    } = setState;
+
+  const [namaLengkap, setnamaLengkap] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [jenisKelamin, setjenisKelamin] = useState('');
+   const [posts, setPosts] = useState([]);
+
   return (
     <div className='flex flex-col'>
       <Navbar/>

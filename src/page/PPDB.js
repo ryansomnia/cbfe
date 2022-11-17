@@ -1,28 +1,61 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Navbar from '../component/Navbar'
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
 
-const client = axios.create({
-  baseURL: "localhost:3000" 
-});
+
 
 export default function PPDB() {
 
-  let {
-    namaLengkap,    jenisKelamin,    tanggalLahir,    tempatLahir,    agama,    gereja,    kewarganegaraan,    jumlahSaudara,    anakKe,    golonganDarah,    alamat,    noHandphone,    bertempatTinggal,    jarakKeSekolah,    NIK,
-    asalSekolah,    tanggalDanNoSTTBTK,    a_namaAyah,    a_pendidikanTerakhir,    a_pekerjaan,    a_alamatKantor,    a_agama,    a_gereja,    a_tempatLahir,    a_tglLahir,    a_alamatRumah,    a_noHandphone,    i_namaIbu,
-    i_pendidikanTerakhir,    i_pekerjaan,    i_alamatKantor,    i_agama,    i_gereja,    i_tempatLahir,    i_tglLahir,    i_alamatRumah,    i_noHandphone
-    } = setState;
+  const navigate = useNavigate(); 
 
-  const [namaLengkap, setnamaLengkap] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [jenisKelamin, setjenisKelamin] = useState('');
-   const [posts, setPosts] = useState([]);
+  const api = "http://localhost:3014/register/registerData"
+
+  // let obj = { namaLengkap: ,    jenisKelamin,    tanggalLahir,    tempatLahir,    agama,    gereja,    kewarganegaraan,    jumlahSaudara,    anakKe,    golonganDarah,    alamat,    noHandphone,    bertempatTinggal,    jarakKeSekolah,    NIK,
+  //     asalSekolah,    tanggalDanNoSTTBTK,    a_namaAyah,    a_pendidikanTerakhir,    a_pekerjaan,    a_alamatKantor,    a_agama,    a_gereja,    a_tempatLahir,    a_tglLahir,    a_alamatRumah,    a_noHandphone,    i_namaIbu,
+  //     i_pendidikanTerakhir,    i_pekerjaan,    i_alamatKantor,    i_agama,    i_gereja,    i_tempatLahir,    i_tglLahir,    i_alamatRumah,    i_noHandphone
+  //    }
+
+
+   const [posts, setPosts] = useState({});
+
+   const postData = async (e)=>{
+    e.preventDefault();
+    try {
+     let result = await axios.post(api,posts)
+     console.log(result);
+     Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: `Registrasi Berhasil`,
+      text: `Silahkan datang ke Cerdas Bangsa untuk Step selanjutnya`,
+      showConfirmButton: false,
+      timer: 1500
+    })
+    navigate("/")
+
+    } catch (err) {
+      console.log(err);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Registrasi gagal !'
+      })
+    }
+  }
+
+   const handleOnChange = (e) => {
+      e.preventDefault()
+      console.log(e.target.value);
+      setPosts(prev => {
+        prev[e.target.name] = e.target.value
+        return prev
+      })
+      console.log(posts);
+   }
+
+
 
   return (
     <div className='flex flex-col'>
@@ -36,20 +69,23 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
         Nama Lengkap
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
+      <input 
+      onChange={handleOnChange}
+      name = "namaLengkap"
+      className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane"/>
 
     </div>
     <div className="w-full md:w-2/3 px-3">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
         Nama Panggilan
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
+      <input name='NamaPanggilan' onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe"/>
     </div>
     <div className="w-full md:w-1/3 px-3">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
         Jenis Kelamin
       </label>
-      <select className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+      <select name = "jenisKelamin" onChange={handleOnChange}className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
             <option value="lakiLaki">Laki-Laki</option>
             <option value="perempuan">Perempuan</option>
           </select>
@@ -61,20 +97,23 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
         Tanggal Lahir
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" placeholder="Albuquerque"/>
+      <input name = "tanggalLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" placeholder="Albuquerque"/>
     </div>
     <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Tempat Lahir
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input  name = "tempatLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
 
     </div>
     <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
         Agama
       </label>
-      <select className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+      <select 
+       name = "agama"
+      onChange={handleOnChange}
+      className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
             <option value="Protestan">Protestan</option>
             <option value="Katolik">Katolik</option>
             <option value="Budha">Budha</option>
@@ -90,14 +129,18 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Gereja
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input 
+      name = "gereja"
+      onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
 
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Kewarganegaraan
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input 
+       name = "kewarganegaraan"
+      onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
 
     </div>
     </div>
@@ -106,21 +149,25 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Jumlah Saudara
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" />
+      <input
+      name = "jumlahSaudara"
+      onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" />
 
     </div>
     <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Anak ke -
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" />
+      <input 
+      name = "anakKe"
+      onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" />
 
     </div>
     <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Golongan Darah
       </label>
-      <select className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+      <select name = "golonganDarah" onChange={handleOnChange}className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="AB">AB</option>
@@ -133,7 +180,7 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Alamat
       </label>
-      <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <textarea name = "alamat" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
 
     </div>
     
@@ -144,21 +191,21 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Nomor Handphone
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "noHandphone" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Bertempat Tinggal
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "bertempatTinggal" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
       
     </div>
     <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Jarak dari sekolah
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" placeholder="Km" />
+      <input name = "jarakKeSekolah" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="number" placeholder="Km" />
       
     </div>
     
@@ -168,14 +215,14 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Nomor Induk Kependudukan
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name="NIK" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Asal Sekolah
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "asalSekolah" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
       </div>
     </div>
 
@@ -184,7 +231,7 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Tanggal dan No.STTBK TK
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "tanggalDanNoSTTBTK" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     
@@ -195,7 +242,7 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Nama Ayah Kandung / Wali
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "a_namaAyah" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
   
@@ -206,18 +253,16 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Pendidikan Terakhir 
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      
+      <input name = "a_pendidikanTerakhir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Pekerjaan
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
-     
+      <input name = "a_pekerjaan" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
     </div>
-  
-  
     </div>
 
     <div className="flex flex-wrap -mx-3 mb-2">
@@ -226,7 +271,7 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Alamat Kantor
       </label>
-      <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <textarea name = "a_alamatKantor" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
   
@@ -236,14 +281,14 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Agama
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "a_agama" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
        Gereja
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "a_gereja" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
   
@@ -254,14 +299,14 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Tempat Lahir
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "a_tempatLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
        Tanggal Lahir
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" />
+      <input name = "a_tglLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" />
      
     </div>
   
@@ -273,7 +318,7 @@ export default function PPDB() {
     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Alamat Rumah
     </label>
-    <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+    <textarea name = "a_alamatRumah" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
    
   </div>
 
@@ -284,7 +329,7 @@ export default function PPDB() {
     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Nomor Handphone
     </label>
-    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+    <input name = "a_noHandphone" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
    
   </div>
 
@@ -296,29 +341,23 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Nama Ibu Kandung / Wali
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
-     
+      <input name = "i_namaIbu" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />  
     </div>
-  
     </div>
-
     <div className="flex flex-wrap -mx-3 mb-2">
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Pendidikan Terakhir 
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "i_pendidikanTerakhir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Pekerjaan
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
-     
+      <input name = "i_pekerjaan" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />   
     </div>
-  
-  
     </div>
 
     <div className="flex flex-wrap -mx-3 mb-2">
@@ -327,7 +366,7 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Alamat Kantor
       </label>
-      <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <textarea name = "i_alamatKantor" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
   
@@ -337,14 +376,14 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Agama
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "i_agama" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
        Gereja
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "i_gereja" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
   
@@ -355,14 +394,14 @@ export default function PPDB() {
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Tempat Lahir
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+      <input name = "i_tempatLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
      
     </div>
     <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
        Tanggal Lahir
       </label>
-      <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" />
+      <input name = "i_tglLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" />
      
     </div>
   
@@ -374,7 +413,7 @@ export default function PPDB() {
     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Alamat Rumah
     </label>
-    <textarea className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+    <textarea name = "i_alamatRumah" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
    
   </div>
 
@@ -385,14 +424,14 @@ export default function PPDB() {
     <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
       Nomor Handphone
     </label>
-    <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+    <input name = "i_noHandphone" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
    
   </div>
 
   </div>
 
-  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
-  Button
+  <button onClick={postData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
+  Register
 </button>
 
  

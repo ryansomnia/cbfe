@@ -10,13 +10,7 @@ export default function PPDB() {
 
   const navigate = useNavigate(); 
 
-  const api = "http://localhost:3014/register/registerData"
-
-  // let obj = { namaLengkap: ,    jenisKelamin,    tanggalLahir,    tempatLahir,    agama,    gereja,    kewarganegaraan,    jumlahSaudara,    anakKe,    golonganDarah,    alamat,    noHandphone,    bertempatTinggal,    jarakKeSekolah,    NIK,
-  //     asalSekolah,    tanggalDanNoSTTBTK,    a_namaAyah,    a_pendidikanTerakhir,    a_pekerjaan,    a_alamatKantor,    a_agama,    a_gereja,    a_tempatLahir,    a_tglLahir,    a_alamatRumah,    a_noHandphone,    i_namaIbu,
-  //     i_pendidikanTerakhir,    i_pekerjaan,    i_alamatKantor,    i_agama,    i_gereja,    i_tempatLahir,    i_tglLahir,    i_alamatRumah,    i_noHandphone
-  //    }
-
+  const api = "http://8.215.37.21:3014/register/registerData"
 
    const [posts, setPosts] = useState({});
 

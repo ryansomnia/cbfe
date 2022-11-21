@@ -39,7 +39,7 @@ export default function Navbar() {
     <header className="header">
       <div className="header__content">
         <Link to="/" className="header__content__logo">
-          LOGO
+          CERDAS BANGSA
         </Link>
         <nav
           className={`${"header__content__nav"} 

@@ -1,4 +1,3 @@
-import React from 'react'
 // import Navbar from '../component/Navbar'
 // import Navbarr from '../component/Navbarr'
 // import Product from '../component/Product'
@@ -11,9 +10,10 @@ import Footer from '../component/Footer'
 import Napbar from '../component/Napbar'
 import CarouselNews from '../component/Carousel'
 import './Home.css'
-
+import React from "react";
 
 const Home = () => {
+
   return (
     <div>
 

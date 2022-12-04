@@ -38,8 +38,10 @@ export default function Navbar() {
   return (
     <header className="header">
       <div className="header__content">
-        <Link to="/" className="header__content__logo">
-          CERDAS BANGSA
+        
+        <Link to="/" className="header__content__logo  ">
+        
+                   CERDAS BANGSA
         </Link>
         <nav
           className={`${"header__content__nav"} 
@@ -52,15 +54,6 @@ export default function Navbar() {
             </li>
             <li>
               <Link to="/profile">Profil</Link>
-            </li>
-            <li>
-              <Link to="/">Visi Misi</Link>
-            </li>
-            <li>
-              <Link to="/">Pelayanan</Link>
-            </li>
-            <li>
-              <Link to="/">Ekskul</Link>
             </li>
             <li>
               <Link to="/">SD</Link>

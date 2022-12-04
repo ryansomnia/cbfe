@@ -5,7 +5,7 @@ export default function Footer() {
     <div>
 
         {/* FOORTER START */}
-        <section class="pt-24 bg-white overflow-hidden">
+        <section class=" bg-white overflow-hidden">
             <div class="container px-4 mx-auto">
                 <div class="border-b">
                

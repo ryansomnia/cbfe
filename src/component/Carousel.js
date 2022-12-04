@@ -25,13 +25,18 @@ export default function CarouselNews() {
     <div>
       <div id="carouselExampleControls" class="carousel slide relative" data-bs-ride="carousel">
   <div class="carousel-inner relative w-full overflow-hidden">
-    {dataArtikel.map((x)=>
+    {dataArtikel.map((x,i)=>
     <div class="carousel-item active relative float-left w-full">
       <img
         src={x.url}
+        key={i}
         class="block w-full"
         alt={x.judul}
       />
+       <div className="carousel-caption hidden md:block absolute text-center">
+        <h5 className="text-xl">{x.judul}</h5>
+        <p>{x.isi}</p>
+      </div>
     </div>
     )}
    

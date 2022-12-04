@@ -51,8 +51,6 @@ const Home = () => {
               </div>
           </div>
           </section>
-         
-        <Footer/>
       </div>
      <Footer/>
     </div>

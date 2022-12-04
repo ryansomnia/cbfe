@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import Navbar from '../component/Navbar'
+import Napbar from './../component/Napbar'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2'
@@ -53,11 +53,31 @@ export default function PPDB() {
 
   return (
     <div className='flex flex-col'>
-      <Navbar/>
+      <Napbar/>
      
-        <h1 className='m-5 self-center text-3xl text-black	font-medium'>Formulir Registrasi</h1>
-      <div className=' m-5 p-5 flex flex-col'>
-        <form className=" w-full max-w-lg self-center">
+        <h1 className='mt-5 mb-2 self-center text-3xl text-black	font-medium'>Formulir Registrasi</h1>
+      <div className=' m-5 flex flex-col'>
+        <form className=" w-full max-w-2xl self-center">
+        <div className="flex flex-wrap -mx-3 mb-2">
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+        Nama Lengkap
+      </label>
+      <input 
+      name = "namaLengkap"
+      onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+
+    </div>
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+       Nama Panggilan
+      </label>
+      <input 
+       name = "NamaPanggilan"
+      onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+
+    </div>
+    </div>
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full md:w-2/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">

@@ -1,42 +1,59 @@
-const features = [
-    { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
-    { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
-    { name: 'Dimensions', description: '6.25" x 3.55" x 1.15"' },
-    { name: 'Finish', description: 'Hand sanded and finished with natural oil' },
-    { name: 'Includes', description: 'Wood card tray and 3 refill packs' },
-    { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
-  ]
-  
+import React,{useState, useEffect} from 'react'
+import axios from "axios";
+import moment from "moment"
+import {MdDateRange } from "react-icons/md";
+
   export default function News() {
-    return (
-      <div className="bg-white">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 items-center gap-y-16 gap-x-8 py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
-          <div>
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Technical Specifications</h2>
-            <p className="mt-4 text-gray-500">
-              The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
-              steel divider separates active cards from new ones, or can be used to archive important task lists.
-            </p>
+    const [dataArtikel, setDataArtikel] = useState([]);
+
+    useEffect(() => {
+    
+      const api = `http://localhost:3014/artikel/getNews`;
   
-            {/* <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
-              {features.map((feature) => (
-                <div key={feature.name} className="border-t border-gray-200 pt-4">
-                  <dt className="font-medium text-gray-900">{feature.name}</dt>
-                  <dd className="mt-2 text-sm text-gray-500">{feature.description}</dd>
-                </div>
-              ))}
-            </dl> */}
-          </div>
-          <div className="grid gap-4 sm:gap-6 lg:gap-8">
-            <img
-              src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
-              alt="Walnut card tray filled with cards and card angled in dedicated groove."
-              className="rounded-lg bg-gray-100 w-[400px] h-[400px]"
-            />
-          </div>
-          
+      const getData = async (e) => {
+          try {
+            let res = await axios.get(api);
+            setDataArtikel(res.data);
+            console.log(res.data);
+          } catch (err) {
+            console.log("err", err.response.status);
+          }
+        };
+  
+      getData();
+    }, []);
+    return (
+      <section className="pt-5 pb-36  overflow-hidden mt-5">
+      <div className="container px-4 mx-auto">
+          <h2 className="mb-4 text-6xl md:text-5xl text-center font-bold font-heading font-heading tracking-px-n leading-tight text-gray-800">BERITA SEKOLAH</h2>
+          {/* <p className="mb-24 font-medium text-gray-800 text-center leading-relaxed md:max-w-lg mx-auto">Lorem ipsum dolor sit amet, to the consectr adipiscing elit. Volutpat tempor to the condimentum vitae vel purus.</p> */}
+          <div className="flex flex-wrap mb-10">
+          {dataArtikel.map((x,i)=>
+      <div id='news' className="bg-gray-800 ml-10">
+         <img id='news'
+        src={x.url}
+        key={i}
+        className="block w-full"
+        alt={x.judul}/>
+       <h1 className="  text-xl md:text-3xl
+       text-gray-800 
+       leading-relaxed md:max-w-lg mx-auto">{x.judul}</h1>
+       <div className='flex flex-col '>
+        <div className='flex flex-row'>
+       <MdDateRange size={25}/>
+       <p className='ml-2'>{moment(x.tglCreate).format("DD-MM-YYYY")}</p>
+       </div>
+       <div className='leading-relaxed w-auto mt-3'>
+       <button className='ml-2 mt-2 font-semibold bg-gray-800 text-white rounded-md p-2 w-auto'>Baca Selengkapnya</button>
+       </div>
         </div>
+
       </div>
+     
+          )}
+      </div>
+      </div>
+      </section>
     )
   }
   

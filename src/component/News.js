@@ -23,8 +23,8 @@ import {MdDateRange } from "react-icons/md";
       getData();
     }, []);
     return (
-      <section className="pt-5 pb-36  overflow-hidden mt-5">
-      <div className="container px-4 mx-auto">
+      <section className="pt-3 pb-36  overflow-hidden mt-5">
+      <div className="container px-4 py-2 mx-auto">
           <h2 className="mb-4 text-6xl md:text-5xl text-center font-bold font-heading font-heading tracking-px-n leading-tight text-gray-800">BERITA SEKOLAH</h2>
           {/* <p className="mb-24 font-medium text-gray-800 text-center leading-relaxed md:max-w-lg mx-auto">Lorem ipsum dolor sit amet, to the consectr adipiscing elit. Volutpat tempor to the condimentum vitae vel purus.</p> */}
           <div className="flex flex-wrap mb-10">

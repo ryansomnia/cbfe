@@ -56,10 +56,10 @@ export default function Navbar() {
               <Link to="/profile">Profil</Link>
             </li>
             <li>
-              <Link to="/">SD</Link>
+              <Link to="/sd">SD</Link>
             </li>
             <li>
-              <Link to="/">TK</Link>
+              <Link to="/tk">TK</Link>
             </li>
 
             <Link to="/ppdb">

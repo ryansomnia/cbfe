@@ -2,10 +2,14 @@ import React,{useState, useEffect} from 'react'
 import axios from "axios";
 import moment from "moment"
 import {MdDateRange } from "react-icons/md";
-
+import { useNavigate } from "react-router-dom";
+// import DetailArtikel from '../page/DetailArtikel';
   export default function News() {
+
     const [dataArtikel, setDataArtikel] = useState([]);
 
+    const navigate = useNavigate(); 
+    
     useEffect(() => {
     
       const api = `http://localhost:3014/artikel/getNews`;
@@ -23,37 +27,32 @@ import {MdDateRange } from "react-icons/md";
       getData();
     }, []);
     return (
-      <section className="pt-3 pb-36  overflow-hidden mt-5">
-      <div className="container px-4 py-2 mx-auto">
-          <h2 className="mb-4 text-6xl md:text-5xl text-center font-bold font-heading font-heading tracking-px-n leading-tight text-gray-800">BERITA SEKOLAH</h2>
-          {/* <p className="mb-24 font-medium text-gray-800 text-center leading-relaxed md:max-w-lg mx-auto">Lorem ipsum dolor sit amet, to the consectr adipiscing elit. Volutpat tempor to the condimentum vitae vel purus.</p> */}
-          <div className="flex flex-wrap mb-10">
-          {dataArtikel.map((x,i)=>
-      <div id='news' className="bg-gray-800 ml-10">
-         <img id='news'
-        src={x.url}
-        key={i}
-        className="block w-full"
-        alt={x.judul}/>
-       <h1 className="  text-xl md:text-3xl
-       text-gray-800 
-       leading-relaxed md:max-w-lg mx-auto">{x.judul}</h1>
-       <div className='flex flex-col '>
-        <div className='flex flex-row'>
-       <MdDateRange size={25}/>
-       <p className='ml-2'>{moment(x.tglCreate).format("DD-MM-YYYY")}</p>
-       </div>
-       <div className='leading-relaxed w-auto mt-3'>
-       <button className='ml-2 mt-2 font-semibold bg-gray-800 text-white rounded-md p-2 w-auto'>Baca Selengkapnya</button>
-       </div>
-        </div>
+      <section className="pt-3 pb-12  overflow-hidden mt-5 ml-12">
+       <div className="flex justify-left">
+       {dataArtikel.map((x,i)=>
+  <div className="rounded-lg shadow-lg mr-7 bg-white max-w-sm">
+      <img className="rounded-t-lg" src={x.url} alt=""/>
+    <div className="p-6">
+      <h5 className="text-gray-900 text-xl font-medium mb-2">{x.judul}</h5>
+      <div className='flex flex-row'>
+        <MdDateRange size={25}/>
+      <p className="text-gray-700 text-base mb-4">{moment(x.tglCreate).format("DD-MM-YYYY")}</p>
+      </div>
+      
+      <button type="button" 
+      className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs
+       leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg 
+       focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+        active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" 
+        onClick={()=>navigate('detailArtikel', {state:{id:x.idartikel}})}
+        >Baca Selengkapnya</button>
+    </div>
+  </div>
+  )}
+</div>
 
-      </div>
-     
-          )}
-      </div>
-      </div>
       </section>
+     
     )
   }
   

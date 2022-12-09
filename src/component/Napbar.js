@@ -62,13 +62,8 @@ export default function Navbar() {
               <Link to="/tk">TK</Link>
             </li>
 
-            <Link to="/ppdb">
-                PPDB
-              {/* <button className="btn">PPDB</button> */}
-            </Link>
-            {/* <Link to="/login">
-              <button className="btn btn__login">Login</button>
-            </Link> */}
+            <Link to="/ppdb">PPDB</Link>
+          
           </ul>
         </nav>
         <div className="header__content__toggle">

@@ -5,6 +5,7 @@ import CarouselNews from '../component/Carousel'
 import './Home.css'
 import React from "react";
 import News from '../component/News';
+import Youtube from '../component/Youtube';
 
 const Home = () => {
 
@@ -14,7 +15,7 @@ const Home = () => {
      <CarouselNews/>
      <div className="flex flex-col">
   
-      <section className='bg-gray-800 overflow-hidden mt-5'>
+      <section className='bg-green overflow-hidden mt-5'>
       <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
         <div className="w-full lg:w-6/12 pb-12">
                   <img className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
@@ -48,7 +49,7 @@ const Home = () => {
                   <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
             </div>
         </div>
-          
+          <Youtube/>
           
 
 

@@ -5,6 +5,13 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js"
   ],
   theme: {
+    colors: {
+      'green': '#028174',
+      'leave': '#OAB68B',
+      'tea': '#92DE8B',
+      'yellow': '#FFE3B3',
+      'white' : '#EDF6F3'
+    },
     extend: {},
   },
   corePlugins: {

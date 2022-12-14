@@ -49,7 +49,28 @@ export default function Tk() {
               </div>
               <div className="w-full lg:w-5/12 flex flex-col justify-center">
                   <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-2">Sejarah Singkat TK Cerdas Bangsa </h1>
-                  <p className="font-normal text-base leading-6 text-gray-800 ">Membangun generasi yang beriman, berkarakter, cerdas dan berkharisma </p>
+                  <p className="font-normal text-base leading-6 text-gray-800 mt-3">Taman kanak - kanak Cerdas Bangsa didirikan pada tanggal 25 Juni 2006 berdasarkan izin diknas Kabupaten Bogor No. 421.1/2160-Disdik/2007 Oktober 2008 dengan akreditasi B. dan didirikan oleh Bpk. Hendrawan. Tujuan didirikannya TK Cerdas bangsa ini adalah untuk memberikan pelayanan kepada anak - anak yang tinggal di sekitar lingkungan sekolah. 
+
+</p>
+<p className="font-normal text-base leading-6 text-gray-800 mt-3">TK Cerdas Bangsa adalah pendidikan yang berbasis anak usia dini dengan dasar agama Kristen yang bertujuan untuk mendidik karakter anak - anak sejak usia dini, dengan fokus pengajaran kepada pengembangan kognitif, sosial emosional, fisik motorik dan materi pengetahuan lain yang disesuaikan dengan usia dini dan dikembangkan oleh guru - guru TK Cerdas Bangsa yang telah berpengalaman di bidangnya.
+
+</p>
+
+{/* <p className="font-normal text-base leading-6 text-gray-800 mt-3">Sejak didirikan, antusias dari masyarakat sekitar begitu besar, bahkan bukan hanya masyarakat sekitar tetapi masyarakat dari luar Desa Cimandala yang jaraknya lumayan jauh juga ikut mendaftarkan anak - anaknya untuk dididik di TK Cerdas Bangsa. Dengan dukungan fasilitas yang memadai seperti ruang kelas, tempat bermain, lingkungan yang asri serta lokasinya yang mudah dijangkau oleh kendaraan umum membuat peserta didik tahun demi tahun terus bertambah. Hingga tahun 2022 ini, TK Cerdas Bangsa telah meluluskan 16 angkatan.
+
+</p> */}
+          
+              </div>
+             
+          </div>
+          <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
+        <div className="w-full lg:w-6/12 pb-12">
+                  <img className="w-full h-full" src="img/TK.JPG" alt="A group of People" />
+              </div>
+              <div className="w-full lg:w-5/12 flex flex-col justify-center">
+            <p className="font-normal text-base leading-6 text-gray-800 mt-3">Sejak didirikan, antusias dari masyarakat sekitar begitu besar, bahkan bukan hanya masyarakat sekitar tetapi masyarakat dari luar Desa Cimandala yang jaraknya lumayan jauh juga ikut mendaftarkan anak - anaknya untuk dididik di TK Cerdas Bangsa. Dengan dukungan fasilitas yang memadai seperti ruang kelas, tempat bermain, lingkungan yang asri serta lokasinya yang mudah dijangkau oleh kendaraan umum membuat peserta didik tahun demi tahun terus bertambah. Hingga tahun 2022 ini, TK Cerdas Bangsa telah meluluskan 16 angkatan.
+</p>
+
           
               </div>
              
@@ -109,10 +130,10 @@ export default function Tk() {
                 
             </div>
             </section>
-            <section class="bg-gray-900 text-white body-font mt-5">
+            <section class="bg-gray-900 text-black body-font mt-5">
             <div class="container px-5 mx-auto py-5">
                 <div class="text-center mb-10">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4 ">Ekstrakulikuler</h1>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-black mb-4 ">Kegiatan Pembelajaran TK Cerdas Bangsa</h1>
                 {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Berikut Struktur Organisasi dari TK Cerdas Bangsa</p> */}
                 <div class="flex mt-6 justify-center">
                     <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
@@ -126,23 +147,44 @@ export default function Tk() {
                   
                     <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44  w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                          <img className='h-44  w-72 rounded-md' src='' alt=''></img>
+                          <img className='h-44  w-72 rounded-md' src='/img/UPACARABENDERA.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-white">Ekstrakulikuler 1</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-black">Upacara Bendera</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
                     </div>
                     <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44  w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44  w-72 rounded-md' src='' alt=''></img>
+                        <img className='h-44  w-72 rounded-md' src='/img/KEGIATANPEMBELAJARANANGKLUNG.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-white">Ekstrakulikuler 2</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-black">Kegiatan Pembelajaran Angklung</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p> */}
                     </div>
                     <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44  w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44  w-72 rounded-md' src='' alt=''></img>
+                        <img className='h-44  w-72 rounded-md' src='/img/KEGIATANPEMBELAJARANSAINS.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-white">Ekstrakulikuler 3</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-black">Kegiatan Sains</h4>
+                        {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK A</p> */}
+                    </div>
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div className="bg-indigo-100 h-44  w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                          <img className='h-44  w-72 rounded-md' src='/img/CHAPELPAGI.JPG' alt=''></img>
+                        </div>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-black">Chapel Pagi</h4>
+                        {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
+                    </div>
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div className="bg-indigo-100 h-44  w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                        <img className='h-44  w-72 rounded-md' src='/img/GEMARMEMBACA.JPG' alt=''></img>
+                        </div>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-black">Gemar Membaca</h4>
+                        {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p> */}
+                    </div>
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div className="bg-indigo-100 h-44  w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                        <img className='h-44  w-72 rounded-md' src='/img/LEADERSHIP.JPG' alt=''></img>
+                        </div>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-black">Leadership</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK A</p> */}
                     </div>
                   
@@ -156,7 +198,7 @@ export default function Tk() {
             <section class="bg-white text-gray-900 body-font mt-5">
             <div class="container px-5 mx-auto py-5">
                 <div class="text-center mb-10">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 ">Fasilitas</h1>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 ">Fasilitas TK Cerdas Bangsa</h1>
                 {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Berikut Struktur Organisasi dari TK Cerdas Bangsa</p> */}
                 <div class="flex mt-6 justify-center">
                     <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
@@ -168,34 +210,41 @@ export default function Tk() {
                 <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
                
                   
-                    <div class="p-4 md:w-1/2 flex flex-col text-center items-center">
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                          <img className='h-44 w-72 rounded-md' src='' alt=''></img>
+                          <img className='h-44 w-72 rounded-md' src='/img/RuangKelas.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Fasilitas 1</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Ruang Kelas</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
                     </div>
-                    <div class="p-4 md:w-1/2 flex flex-col text-center items-center">
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44 w-72 rounded-md' src='' alt=''></img>
+                        <img className='h-44 w-72 rounded-md' src='/img/AREABERMAINOUTDOR.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Fasilitas 2</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Arena Bermain Outdoor</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p> */}
                     </div>
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                          <img className='h-44 w-72 rounded-md' src='/img/AREABERMAININDOR.JPG' alt=''></img>
+                        </div>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Arena Bermain Indoor</h4>
+                        {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
+                    </div>
                   
                   
                     <div class="p-4 md:w-1/2 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                          <img className='h-44 w-72 rounded-md' src='' alt=''></img>
+                          <img className='h-44 w-72 rounded-md' src='/img/PERPUSTAKAAN.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Fasilitas 3</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Perpustakaan</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
                     </div>
                     <div class="p-4 md:w-1/2 flex flex-col text-center items-center">
                         <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44 w-72 rounded-md' src='' alt=''></img>
+                        <img className='h-44 w-72 rounded-md' src='img/SAINSAREA.JPG' alt=''></img>
                         </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Fasilitas 4</h4>
+                        <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Sains Area</h4>
                         {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p> */}
                     </div>
                 

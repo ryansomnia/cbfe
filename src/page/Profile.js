@@ -65,7 +65,7 @@ export default function Profile() {
             </div>
         </div>
         </section>
-       
+       {/* galery  */}
       <Footer/>
     </div>
   );

@@ -27,8 +27,8 @@ const Home = () => {
           </p>
               </div>
              
-          </div>
-          </section>
+      </div>
+      </section>
         <News/>
         <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
             <div className="w-full lg:w-6/12 ">
@@ -41,15 +41,15 @@ const Home = () => {
              
         </div>
         <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
-            <div className="w-full lg:w-5/12 flex flex-col justify-center">
-                <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SD CERDAS BANGSA</h1>
-                <p className="font-normal text-base leading-6 text-gray-600 "> SD Cerdas bangsa, 
+        <div className="w-full lg:w-5/12 flex flex-col justify-center">
+            <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SD CERDAS BANGSA</h1>
+            <p className="font-normal text-base leading-6 text-gray-600 "> SD Cerdas bangsa, 
 SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Kabupaten Bogor Nomor : 421.2/243-Disdik/2010. Dengan Akreditasi A. Dan didirikan oleh Bapak Hendrawan. Tujuan didirikannya SD Cerdas Bangsa ini adalah untuk ikut berperan aktif mencerdaskan kehidupan bangsa dan negara khususnya di bidang pendidikan. Serta memajukan Desa cimandala dengan sarana pendidikan Sekolah Dasar. 
 </p>
-            </div>
-            <div className="w-full lg:w-6/12 ">
-                  <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
-            </div>
+        </div>
+        <div className="w-full lg:w-6/12 ">
+              <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
+        </div>
         </div>
           {/* <Youtube/> */}
           

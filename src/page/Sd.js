@@ -55,82 +55,30 @@ SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Ka
            
         </div>
           </section>
-          <section class="text-gray-600 body-font">
-            <div class="container px-5 mx-auto">
-                <div class="text-center mb-10">
-                    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 mt-4">Struktur Organisasi</h1>
-                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Berikut Struktur Organisasi dari TK Cerdas Bangsa</p>
-                    <div class="flex mt-6 justify-center">
-                        <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
-                    </div>
-                </div>
-                <div class="p-4 flex flex-col text-center items-center">
-                    <img className='h-44 w-44 rounded-full' src='/img/butiarma.png' alt=''></img>
-                    <h4 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Tiarma Rosmauli S,Kom, S.Pd</h4>
-                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p>
-                </div>
-{/*  */}
-                <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"> 
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div className="bg-indigo-100 h-44 w-44 rounded-full  inline-flex items-center justify-center flex-shrink-0">
-                            <img className='h-44 w-44 rounded-full' src='/img/gurutk1.png' alt=''></img>
-                        </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font text-gray-900">Garina Austin S,Pd</h4>
-                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Wali Kelas 1</p>
-                    </div>
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div className="bg-indigo-100 h-44 w-44 rounded-full  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44 w-44 rounded-full' src='/img/busondang.png' alt=''></img>
-                        </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font text-gray-900">Fanilisa Ernawati, S.Pd</h4>
-                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Wali Kelas 2</p>
-                    </div>
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div className="bg-indigo-100 h-44 w-44 rounded-full  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44 w-44 rounded-full' src='/img/gurutk2.png' alt=''></img>
-                        </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font text-gray-900">Anastasia A. Winarni S. Pd</h4>
-                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Wali Kelas 3</p>
-                    </div>
-                </div>
-                <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"> 
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div className="bg-indigo-100 h-44 w-44 rounded-full  inline-flex items-center justify-center flex-shrink-0">
-                            <img className='h-44 w-44 rounded-full' src='/img/gurutk1.png' alt=''></img>
-                        </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font text-gray-900">Martha Simanullang, S.Pd</h4>
-                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Wali Kelas 4</p>
-                    </div>
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div className="bg-indigo-100 h-44 w-44 rounded-full  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44 w-44 rounded-full' src='/img/busondang.png' alt=''></img>
-                        </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font text-gray-900">Dame Romiuli Simanjuntak</h4>
-                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Wali Kelas 5</p>
-                    </div>
-                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                        <div className="bg-indigo-100 h-44 w-44 rounded-full  inline-flex items-center justify-center flex-shrink-0">
-                        <img className='h-44 w-44 rounded-full' src='/img/gurutk2.png' alt=''></img>
-                        </div>
-                        <h4 class="sm:text-xl text-2xl font-medium title-font text-gray-900">Anastasia A. Winarni S. Pd</h4>
-                        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Wali Kelas 6</p>
-                    </div>
-                </div>      
-            </div>
-            </section>
+          
 <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
     <div class="text-center pb-12">
-        <h2 class="text-base font-bold text-indigo-600">
+        {/* <h2 class="text-base font-bold text-indigo-600">
             We have the best equipment
-        </h2>
+        </h2> */}
         <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
-            Check our awesome team members
+            Tenaga Pengajar
         </h1>
     </div>
+    <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/tiarma.png' alt="photo"/>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Tiarma Rosmauli S,Kom., S.Pd</p>
+                <p class="text-base text-gray-400 font-normal">Kepala Sekolah
+</p>
+            </div>
+        </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div class="mb-8">
-                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/gurutk1.png' alt="photo"/>
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/garina.png' alt="photo"/>
             </div>
             <div class="text-center">
                 <p class="text-xl text-gray-700 font-bold mb-2">Garina Austin S,Pd</p>
@@ -139,7 +87,7 @@ SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Ka
         </div>
         <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div class="mb-8">
-                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/busondang.png' alt="photo"/>
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/fani.png' alt="photo"/>
             </div>
             <div class="text-center">
                 <p class="text-xl text-gray-700 font-bold mb-2">Fanilisa Ernawati, S.Pd</p>
@@ -148,37 +96,64 @@ SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Ka
         </div>
         <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div class="mb-8">
-                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/gurutk2.png' alt="photo"/>
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/ratna.png' alt="photo"/>
             </div>
             <div class="text-center">
-                <p class="text-xl text-gray-700 font-bold mb-2">Anastasia A. Winarni S. Pd</p>
+                <p class="text-xl text-gray-700 font-bold mb-2">Ratna Juita S.Pd</p>
                 <p class="text-base text-gray-400 font-normal">Wali Kelas 3</p>
             </div>
         </div>
         <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div class="mb-8">
-                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/gurutk1.png' alt="photo"/>
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/marta.png' alt="photo"/>
             </div>
             <div class="text-center">
-                <p class="text-xl text-gray-700 font-bold mb-2">Martha Simanullang, S.Pd</p>
+                <p class="text-xl text-gray-700 font-bold mb-2">Marta Simanullang, S.Pd</p>
                 <p class="text-base text-gray-400 font-normal">Wali Kelas 4</p>
             </div>
         </div>
         <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div class="mb-8">
-                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/gurutk1.png' alt="photo"/>
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/dame.png' alt="photo"/>
             </div>
             <div class="text-center">
-                <p class="text-xl text-gray-700 font-bold mb-2">Anastasia A. Winarni S. Pd</p>
+                <p class="text-xl text-gray-700 font-bold mb-2">Dame Romiuli S, S.Pd</p>
                 <p class="text-base text-gray-400 font-normal">Wali Kelas 5</p>
             </div>
         </div>
         <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             <div class="mb-8">
-                <img class="object-center object-cover rounded-full h-36 w-36"src='/img/gurutk1.png' alt="photo"/>
+                <img class="object-center object-cover rounded-full h-36 w-36"src='/img/janson.png' alt="photo"/>
             </div>
             <div class="text-center">
-                <p class="text-xl text-gray-700 font-bold mb-2">Janson Sitanggang</p>
+                <p class="text-xl text-gray-700 font-bold mb-2">Janson Sitanggang, SE</p>
+                <p class="text-base text-gray-400 font-normal">Wali Kelas 6</p>
+            </div>
+        </div>
+        <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/yosephine.png' alt="photo"/>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Yosephine Margriet, S.Pd</p>
+                <p class="text-base text-gray-400 font-normal">Guru Bahasa Inggris</p>
+            </div>
+        </div>
+        <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36" src='/img/intan.png' alt="photo"/>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Intan Medina, S.Kom</p>
+                <p class="text-base text-gray-400 font-normal">Guru TIK</p>
+            </div>
+        </div>
+        <div class="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+            <div class="mb-8">
+                <img class="object-center object-cover rounded-full h-36 w-36"src='/img/janson.png' alt="photo"/>
+            </div>
+            <div class="text-center">
+                <p class="text-xl text-gray-700 font-bold mb-2">Janson Sitanggang, SE</p>
                 <p class="text-base text-gray-400 font-normal">Wali Kelas 6</p>
             </div>
         </div>

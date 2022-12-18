@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
     
     useEffect(() => {
     
-      const api = `http://localhost:3014/artikel/getNews`;
+      const api = `http://8.215.37.21:3014/artikel/getNews`;
   
       const getData = async (e) => {
           try {

@@ -10,7 +10,7 @@ export default function CarouselNews() {
 
   useEffect(() => {
     
-    const api = `http://8.215.37.21:3014/artikel/getCarousel`;
+    const api = `http://89.116.228.164:3014/artikel/getCarousel`;
 
     const getData = async (e) => {
         try {

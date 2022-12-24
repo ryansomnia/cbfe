@@ -12,7 +12,7 @@ export default function News() {
 
   useEffect(() => {
 
-    const api = `http://8.215.37.21:3014/artikel/getNews`;
+    const api = `http://89.116.228.164:3014/artikel/getNews`;
 
     const getData = async (e) => {
       try {

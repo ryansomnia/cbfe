@@ -40,12 +40,12 @@ export default function Tk() {
             </ul> 
             </div>
             <div className="w-full lg:w-6/12 ">
-                  <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
+                  <img className="w-full h-full" src="/img/KEGIATANPEMBELAJARANSAINS.JPG" alt="A group of People" />
             </div>
         </div>
         <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
         <div className="w-full lg:w-6/12 pb-12">
-                  <img className="w-full h-full" src="img/TK.JPG" alt="A group of People" />
+                  <img className="w-full h-full" src="img/CHAPELPAGI.JPG" alt="A group of People" />
               </div>
               <div className="w-full lg:w-5/12 flex flex-col justify-center">
                   <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-2">Sejarah Singkat TK Cerdas Bangsa </h1>
@@ -65,7 +65,7 @@ export default function Tk() {
           </div>
           <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
         <div className="w-full lg:w-6/12 pb-12">
-                  <img className="w-full h-full" src="img/TK.JPG" alt="A group of People" />
+                  <img className="w-full h-full" src="img/TKBELAJAR.JPG" alt="A group of People" />
               </div>
               <div className="w-full lg:w-5/12 flex flex-col justify-center">
             <p className="font-normal text-base leading-6 text-gray-800 mt-3">Sejak didirikan, antusias dari masyarakat sekitar begitu besar, bahkan bukan hanya masyarakat sekitar tetapi masyarakat dari luar Desa Cimandala yang jaraknya lumayan jauh juga ikut mendaftarkan anak - anaknya untuk dididik di TK Cerdas Bangsa. Dengan dukungan fasilitas yang memadai seperti ruang kelas, tempat bermain, lingkungan yang asri serta lokasinya yang mudah dijangkau oleh kendaraan umum membuat peserta didik tahun demi tahun terus bertambah. Hingga tahun 2022 ini, TK Cerdas Bangsa telah meluluskan 16 angkatan.

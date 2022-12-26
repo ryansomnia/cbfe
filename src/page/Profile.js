@@ -27,13 +27,13 @@ Sedangkan SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin
  </p>
             </div>
             <div className="w-full lg:w-6/12 ">
-                <img className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
+                <img className="w-full h-full" src="img/gedung.jpeg" alt="A group of People" />
             </div>
            
         </div>
         <div className=" mx-24 my-5 flex flex-col lg:flex-row justify-between gap-8 ">
       <div className="w-full lg:w-6/12 ">
-                <img className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
+                <img className="w-full h-full" src="img/GEMARMEMBACA.JPG" alt="A group of People" />
             </div>
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
                 {/* <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">Sejarah</h1> */}

@@ -8,7 +8,7 @@ export default function Sd() {
            <section className='bg-white overflow-hidden'>
       <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
         <div className="w-full lg:w-6/12 pb-12">
-                  <img className="w-full h-full" src="img/TK.JPG" alt="A group of People" />
+                  <img className="w-full h-full" src="img/belajar.JPG" alt="A group of People" />
               </div>
               <div className="w-full lg:w-5/12 flex flex-col justify-center">
                   <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-2">Visi </h1>
@@ -43,7 +43,7 @@ SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Ka
         </div>
         <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
         <div className="w-full lg:w-6/12 ">
-                  <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
+                  <img className="w-full h-full" src="/img/doaSD.JPG" alt="A group of People" />
             </div>
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
                 {/* <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">Sejarah SD Cerdas Bangsa</h1> */}

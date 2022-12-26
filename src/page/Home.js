@@ -16,9 +16,9 @@ const Home = () => {
       <div className="flex flex-col">
 
         <section className='bg-green overflow-hidden mt-5'>
-          <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
+          <div id="sejarah" className=" mx-12 mt-5 flex flex-col lg:flex-row justify-between gap-8 ">
             <div className="w-full lg:w-6/12 pb-12">
-              <img className="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
+              <img className="w-full h-full" src="img/SD.JPG" alt="A group of People" />
             </div>
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
               <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-white pb-4">Selamat Datang </h1>

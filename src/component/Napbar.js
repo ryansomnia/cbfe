@@ -37,9 +37,10 @@ export default function Navbar() {
     <header className="header">
       <div className="header__content">
         
-        <Link to="/" className="header__content__logo  ">
-        
-                   CERDAS BANGSA
+        <Link to="/" className="header__content__logo  flex">
+        <img className="w-12 h-12" src="logocb.png" alt="A group of People" />
+        <h5>CERDAS BANGSA</h5>
+                   {/* CERDAS BANGSA */}
         </Link>
         <nav
           className={`${"header__content__nav"} 

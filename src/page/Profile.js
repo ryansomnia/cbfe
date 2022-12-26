@@ -1,6 +1,7 @@
 import React from "react";
 import Napbar from "../component/Napbar";
 import Footer from "../component/Footer";
+import Galery from "../component/Galery";
 export default function Profile() {
   return (
     <div className="flex flex-col">
@@ -49,8 +50,7 @@ Sedangkan SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin
         
         
         
-       {/* galery  */}
-       {/* Kunjungi kami di sosialmedia kami  */}
+     <Galery/>
 
       <Footer/>
     </div>

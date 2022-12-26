@@ -5,6 +5,7 @@ import CarouselNews from '../component/Carousel'
 import './Home.css'
 import React from "react";
 import News from '../component/News';
+import Galery from '../component/Galery';
 // import Youtube from '../component/Youtube';
 
 const Home = () => {
@@ -59,6 +60,7 @@ const Home = () => {
 
 
       </div>
+      <Galery/>
       <Footer />
     </div>
   )

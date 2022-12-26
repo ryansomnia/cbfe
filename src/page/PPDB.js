@@ -57,7 +57,7 @@ export default function PPDB() {
       <div className='my-5 mx-5 flex flex-col'>
         <form className=" w-full max-w-2xl self-center">
         <div className="flex flex-wrap -mx-3 mb-2">
-    <div className="w-full md:w-1/1 px-3 mb-6 md:mb-0">
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
         Nama Lengkap
       </label>
@@ -65,6 +65,15 @@ export default function PPDB() {
       name = "namaLengkap"
       onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
 
+    </div>
+    <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+        Jenis Registrasi
+      </label>
+      <select name = "jenisRegis" onChange={handleOnChange}className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+            <option value="TK">TK</option>
+            <option value="SD">SD</option>
+          </select>
     </div>
 
     </div>

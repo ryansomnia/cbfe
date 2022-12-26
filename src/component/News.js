@@ -18,9 +18,7 @@ export default function News() {
       try {
         let res = await axios.get(api);
         setDataArtikel(res.data);
-        console.log(res.data);
       } catch (err) {
-        console.log("err", err.response.status);
       }
     };
 

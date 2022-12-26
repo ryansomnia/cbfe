@@ -14,11 +14,10 @@ export default function DetailArtikel() {
         try {
           let id = location.state.id;
           let res = await axios.post(api, {id});
-          console.log('x',id);
-          console.log('res',res);
+       
           setDataArtikel(res.data);
         } catch (err) {
-          console.log("err", err.response.status);
+         
         }
       };
 

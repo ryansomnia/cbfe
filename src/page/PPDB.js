@@ -18,8 +18,8 @@ export default function PPDB() {
    const postData = async (e)=>{
     e.preventDefault();
     try {
-     let result = await axios.post(api,posts)
-     console.log(result);
+      await axios.post(api,posts)
+     
      Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -31,7 +31,6 @@ export default function PPDB() {
     navigate("/")
 
     } catch (err) {
-      console.log(err);
       Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -42,12 +41,10 @@ export default function PPDB() {
 
    const handleOnChange = (e) => {
       e.preventDefault()
-      console.log(e.target.value);
       setPosts(prev => {
         prev[e.target.name] = e.target.value
         return prev
       })
-      console.log(posts);
    }
 
 

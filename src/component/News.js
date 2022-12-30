@@ -28,22 +28,24 @@ export default function News() {
 
   const slideLeft = () => {
     let slider = document.getElementById('slider')
-    slider.scrollLeft = slider.scrollLeft -  500
+    slider.scrollLeft = slider.scrollLeft - 500
   }
 
   const slideRight = () => {
     let slider = document.getElementById('slider')
-    slider.scrollLeft = slider.scrollLeft +  500
+    slider.scrollLeft = slider.scrollLeft + 500
   }
-  
+
   return (
 
     <div className='flex relative items-center m-4'>
-      <MdChevronLeft className='cursor-pointer' size={50} onClick={slideLeft}/>
+      <MdChevronLeft className='cursor-pointer' size={50} onClick={slideLeft} />
       <div id='slider' className="h-full w-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth">
         {dataArtikel.map((x, i) =>
-          <div className="rounded-lg shadow-lg mr-7 bg-green max-w-sm cursor-pointer inline-block">
-            <img className=" h-52 w-80  rounded-t-lg hover:scale-105 ease-in-out duration-300 rounded-md" src={x.url} alt="" />
+          <div className="rounded-lg shadow-lg mr-4 bg-green max-w-sm cursor-pointer inline-block">
+            <picture className="rounded-lg overflow-hidden block">
+              <img className=" h-52 w-full  rounded-t-lg hover:scale-125 ease-in-out duration-300 rounded-lg" src={x.url} alt="" />
+            </picture>
             <div className="p-6">
               <h5 className="text-white text-xl font-medium mb-2">{x.judul}</h5>
               <div className='flex flex-row'>
@@ -62,7 +64,7 @@ export default function News() {
           </div>
         )}
       </div>
-      <MdChevronRight className='cursor-pointer' size={50} onClick={slideRight}/>
+      <MdChevronRight className='cursor-pointer' size={50} onClick={slideRight} />
     </div>
 
   )

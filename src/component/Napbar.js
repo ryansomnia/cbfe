@@ -36,11 +36,11 @@ export default function Navbar() {
   return (
     <header className="header">
       <div className="header__content">
-        
+
         <Link to="/" className="header__content__logo  flex">
-        <img className="w-12 h-12" src="logocb.png" alt="A group of People" />
-        <h5>CERDAS BANGSA</h5>
-                   {/* CERDAS BANGSA */}
+          <img className="w-12 h-12" src="logocb.png" alt="A group of People" />
+          <h5 className="judul-title">CERDAS BANGSA</h5>
+          {/* CERDAS BANGSA */}
         </Link>
         <nav
           className={`${"header__content__nav"} 
@@ -61,9 +61,9 @@ export default function Navbar() {
               <Link to="/tk">TK</Link>
             </li>
             <li>
-            <Link to="/ppdb">PPDB</Link>
+              <Link to="/ppdb">PPDB</Link>
             </li>
-            
+
           </ul>
         </nav>
         <div className="header__content__toggle">
@@ -75,6 +75,6 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-    
-    )
+
+  )
 }

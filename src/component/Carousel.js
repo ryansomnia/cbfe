@@ -9,24 +9,24 @@ export default function CarouselNews() {
   const [dataArtikel, setDataArtikel] = useState([]);
 
   useEffect(() => {
-    
+
     const api = `http://89.116.228.164:3014/artikel/getCarousel`;
 
     const getData = async (e) => {
-        try {
-          let res = await axios.get(api);
-          setDataArtikel(res.data);
-        } catch (err) {
-        }
-      };
+      try {
+        let res = await axios.get(api);
+        setDataArtikel(res.data);
+      } catch (err) {
+      }
+    };
 
     getData();
   }, []);
   return (
-   
-  <div>
+
+    <div>
       <Carousel
-      showIndicators={false}
+        showIndicators={false}
         infiniteLoop={true}
         autoPlay={true}
         showArrows={true}
@@ -35,20 +35,20 @@ export default function CarouselNews() {
         swipeAnimationHandler={false}
         interval={5000}
       >
-         {dataArtikel.map((data) =>
-         <div>
-        <div id='divCarousel' className=' mx-5 my-2'>
-          <img src={data.url} alt='' id='imgCarousel' className=' rounded-lg'/>
-         
-        </div>
-        <div className='m-3'>
-          <p className=' text-3xl font-bold '>{data.judul}</p>
-        </div>
-         </div>
-       
-)}
+        {dataArtikel.map((data) =>
+          <div>
+            <div id='divCarousel' className=' mx-5 my-2'>
+              <img src={data.url} alt='' id='imgCarousel' className='rounded-lg poster-header' />
+
+            </div>
+            <div className='m-3'>
+              <p className=' text-3xl font-bold '>{data.judul}</p>
+            </div>
+          </div>
+
+        )}
       </Carousel>
-     
+
     </div>
   )
 }

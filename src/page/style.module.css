@@ -18,13 +18,17 @@
   .bodyText {
     padding-top: 20px;
     display: flex;
+    font-size: medium;
+    font-weight: 600;
     justify-content: center;
     align-items: center;
   }
 
   .imgCover {
-    max-width: 500px;
-    max-height: 500px;
+    /* max-width: 65rem;
+    max-height: 37rem; */
+    width: 50rem;
+    height: 30rem;
   }
 
   .titleContent {

@@ -60,9 +60,10 @@ export default function Navbar() {
             <li>
               <Link to="/tk">TK</Link>
             </li>
-
+            <li>
             <Link to="/ppdb">PPDB</Link>
-          
+            </li>
+            
           </ul>
         </nav>
         <div className="header__content__toggle">

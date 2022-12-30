@@ -43,7 +43,7 @@ export default function News() {
       <div id='slider' className="h-full w-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth">
         {dataArtikel.map((x, i) =>
           <div className="rounded-lg shadow-lg mr-7 bg-green max-w-sm cursor-pointer inline-block">
-            <img className="rounded-t-lg hover:scale-105 ease-in-out duration-300 rounded-md" src={x.url} alt="" />
+            <img className=" h-52 w-80  rounded-t-lg hover:scale-105 ease-in-out duration-300 rounded-md" src={x.url} alt="" />
             <div className="p-6">
               <h5 className="text-white text-xl font-medium mb-2">{x.judul}</h5>
               <div className='flex flex-row'>

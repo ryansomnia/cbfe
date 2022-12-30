@@ -11,7 +11,15 @@
 padding: 0% 5% 0% 5%;
   }
   #imgCarousel{
-    padding-top: 3rem;
-    
-    width:80%;
+   /* height: auto;
+   width:400px
+   width: auto; */
+   width: 65rem;
+   height: 37rem;
   }
+  @media (max-width: 640px) {
+    #imgCarousel {
+        width: 40rem;
+        height: 15rem;
+   }
+}

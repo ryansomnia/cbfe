@@ -26,18 +26,25 @@ export default function CarouselNews() {
    
   <div>
       <Carousel
+      showIndicators={false}
         infiniteLoop={true}
         autoPlay={true}
-        showStatus={false}
         showArrows={true}
+        showStatus={false}
         showThumbs={false}
+        swipeAnimationHandler={false}
         interval={5000}
       >
          {dataArtikel.map((data) =>
-        <div >
+         <div>
+        <div id='divCarousel' className=' mx-5 my-2'>
           <img src={data.url} alt='' id='imgCarousel' className=' rounded-lg'/>
-          <p>{data.judul}</p>
+         
         </div>
+        <div className='m-3'>
+          <p className=' text-3xl font-bold '>{data.judul}</p>
+        </div>
+         </div>
        
 )}
       </Carousel>

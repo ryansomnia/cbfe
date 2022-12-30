@@ -4,6 +4,8 @@
   height: 70px;
   padding: 0 1.5rem;
   transition: 0.3s ease all;
+  position: fixed;
+  z-index: 1000;
 }
 @media (min-width: 48em) {
   .header {
@@ -112,7 +114,7 @@
 .header__content__nav .btn:hover {
   border-color: #a2a2f6;
   background: rgba(162, 162, 246, 0.1);
-  color: #a2a2f6;
+  color: #e4e4fa;
 }
 .header__content__nav .btn:active {
   border-color: #a2a2f6;
@@ -138,7 +140,7 @@
   position: relative;
 }
 .header__content__toggle:hover {
-  color: #a2a2f6;
+  color: #b6b6c0;
 }
 @media (min-width: 48em) {
   .header__content__toggle {
@@ -152,4 +154,8 @@
     text-align: center;
     padding-top: 12px;
   }
+}
+
+.judul-title:hover {
+  color: #FCFFE7;
 }

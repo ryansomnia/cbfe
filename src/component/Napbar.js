@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./navbar.css";
 
 export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+  console.log(screenWidth, 'screenWidth');
   const [size, setSize] = useState({
     width: 0,
     height: 0,
@@ -37,34 +40,53 @@ export default function Navbar() {
     <header className="header">
       <div className="header__content">
 
-        <Link to="/" className="header__content__logo  flex">
+        <NavLink to="/" className="header__content__logo  flex">
           <img className="w-12 h-12" src="logocb.png" alt="A group of People" />
           <h5 className="judul-title">CERDAS BANGSA</h5>
           {/* CERDAS BANGSA */}
-        </Link>
+        </NavLink >
         <nav
           className={`${"header__content__nav"} 
           ${menuOpen && size.width < 768 ? `${"isMenu"}` : ""} 
           }`}
         >
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profil</Link>
-            </li>
-            <li>
-              <Link to="/sd">SD</Link>
-            </li>
-            <li>
-              <Link to="/tk">TK</Link>
-            </li>
-            <li>
-              <Link to="/ppdb">PPDB</Link>
-            </li>
 
-          </ul>
+          {screenWidth < 600 ? 
+            <ul>
+              <li>
+                <NavLink to="/" onClick={menuToggleHandler}>Home</NavLink >
+              </li>
+              <li>
+                <NavLink to="/profile" onClick={menuToggleHandler}>Profil</NavLink >
+              </li>
+              <li>
+                <NavLink to="/sd" onClick={menuToggleHandler}>SD</NavLink >
+              </li>
+              <li>
+                <NavLink to="/tk" onClick={menuToggleHandler}>TK</NavLink >
+              </li>
+              <li>
+                <NavLink to="/ppdb" onClick={menuToggleHandler}>PPDB</NavLink >
+              </li>
+            </ul>
+          : 
+          <ul>
+              <li>
+                <NavLink to="/" >Home</NavLink >
+              </li>
+              <li>
+                <NavLink to="/profile">Profil</NavLink >
+              </li>
+              <li>
+                <NavLink to="/sd">SD</NavLink >
+              </li>
+              <li>
+                <NavLink to="/tk">TK</NavLink >
+              </li>
+              <li>
+                <NavLink to="/ppdb">PPDB</NavLink >
+              </li>
+            </ul>}
         </nav>
         <div className="header__content__toggle">
           {!menuOpen ? (

@@ -4,11 +4,7 @@ import Footer from "../component/Footer";
 import Galery from "../component/Galery";
 export default function Profile() {
   return (
-    <div className="flex flex-col">
-      <Napbar />
-     
-      
-      
+    <div className="flex flex-col pt-5">
       <div className=" mx-24 my-5 flex flex-col lg:flex-row justify-between gap-8 ">
       
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
@@ -51,8 +47,6 @@ Sedangkan SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin
         
         
      <Galery/>
-
-      <Footer/>
     </div>
   );
 }

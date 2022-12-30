@@ -10,10 +10,13 @@ import Profile from "./page/Profile";
 import Tk from "./page/Tk";
 import DetailArtikel from "./page/DetailArtikel";
 import Sd from "./page/Sd";
+import Navbar from "./component/Napbar";
+import Footer from "./component/Footer";
 
 export default function App() {
   return (
     <BrowserRouter>
+    <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />
@@ -22,6 +25,7 @@ export default function App() {
         <Route path="/detailArtikel" element={<DetailArtikel />} />
         <Route path="/sd" element={<Sd />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

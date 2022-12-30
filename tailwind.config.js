@@ -10,7 +10,9 @@ module.exports = {
       'leave': '#OAB68B',
       'tea': '#92DE8B',
       'yellow': '#FFE3B3',
-      'white' : '#EDF6F3'
+      'white' : '#EDF6F3',
+      'green-lato': '#04757B',
+      'green-text': '#749F82'
     },
     extend: {},
   },

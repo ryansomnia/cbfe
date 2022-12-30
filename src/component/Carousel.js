@@ -41,9 +41,7 @@ export default function CarouselNews() {
               <img src={data.url} alt='' id='imgCarousel' className='rounded-lg poster-header' />
 
             </div>
-            <div className='m-3'>
-              <p className=' text-3xl font-bold '>{data.judul}</p>
-            </div>
+            <p className=' text-3xl font-bold title-banner'>{data.judul}</p>
           </div>
 
         )}

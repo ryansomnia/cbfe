@@ -15,15 +15,14 @@ const Home = () => {
       <Napbar />
       <CarouselNews />
       <div className="flex flex-col">
-
         <section className='bg-green overflow-hidden mt-5'>
-          <div id="sejarah" className=" mx-12 mt-5 flex flex-col lg:flex-row justify-between gap-8 ">
-            <div className="w-full lg:w-6/12 pb-12">
-              <img className="w-full h-full" src="img/SD.JPG" alt="A group of People" />
+          <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-4 ">
+            <div className="w-full lg:w-6/12">
+              <img style={{ borderRadius: '10px' }} className="w-full h-full" src="img/SD.JPG" alt="A group of People" />
             </div>
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
-              <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-white pb-4">Selamat Datang </h1>
-              <p className="font-normal text-base leading-6 text-white ">Kami sangat menyambut para visitor yang sudah mau berkunjung ke website kami.
+              <h1 className="text-3xl lg:text-4xl font-bold text-white pb-3">Selamat Datang </h1>
+              <p className="font-normal text-base leading-6 text-white pb-4">Kami sangat menyambut para visitor yang sudah mau berkunjung ke website kami.
                 Pertama tama kami mau memperkenalkan Sekolah Cerdas Bangsa ,sekolah yang berbasis Sekolah Kristen yang ada di Bogor dengan TK yang TERAKREDITASI B dan SD yang TERAKREDITASI A.
               </p>
             </div>
@@ -31,6 +30,7 @@ const Home = () => {
           </div>
         </section>
         <News />
+        <hr />
         <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
           <div className="w-full lg:w-6/12 ">
             <img className="w-full h-full" src="/img/TK.JPG" alt="A group of People" />
@@ -41,6 +41,7 @@ const Home = () => {
           </div>
 
         </div>
+        <hr />
         <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 ">
           <div className="w-full lg:w-5/12 flex flex-col justify-center">
             <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SD CERDAS BANGSA</h1>
@@ -53,14 +54,10 @@ const Home = () => {
           </div>
         </div>
         {/* <Youtube/> */}
-
-
-
-
-
-
       </div>
-      <Galery/>
+      <hr />
+      <h2 className='text-center text-4xl font-bold pt-5 pb-2' >Gallery</h2>
+      <Galery />
       <Footer />
     </div>
   )

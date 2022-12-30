@@ -34,8 +34,8 @@ export default function DetailArtikel() {
       <section className="pt-3 pb-36  overflow-hidden ">
         {dataArtikel.map((artikel) =>
           <div className="container px-4 py-2 mx-auto">
-            <h2 className=" text-6xl md:text-5xl text-center font-bold font-heading font-heading tracking-px-n leading-tight text-gray-800">{artikel.judul}</h2>
-            <p className=" font-medium text-gray-800 text-center leading-relaxed md:max-w-lg mx-auto">{moment(artikel.tglCreate). format("DD-MM-YYYY")}</p>
+            <p className={style.titleArtikel}>{artikel.judul}</p>
+            <p className=" font-medium text-gray-800 text-center leading-relaxed md:max-w-lg mx-auto">{moment(artikel.tglCreate).format("DD-MM-YYYY")}</p>
             <div className={style.bodyImg} >
               <img id='news'
                 src={artikel.url}

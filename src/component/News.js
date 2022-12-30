@@ -28,12 +28,12 @@ export default function News() {
 
   const slideLeft = () => {
     let slider = document.getElementById('slider')
-    slider.scrollLeft = slider.scrollLeft - 500
+    slider.scrollLeft = slider.scrollLeft - 260
   }
 
   const slideRight = () => {
     let slider = document.getElementById('slider')
-    slider.scrollLeft = slider.scrollLeft + 500
+    slider.scrollLeft = slider.scrollLeft + 260
   }
 
   return (

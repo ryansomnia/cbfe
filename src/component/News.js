@@ -28,12 +28,12 @@ export default function News() {
 
   const slideLeft = () => {
     let slider = document.getElementById('slider')
-    slider.scrollLeft = slider.scrollLeft - 320
+    slider.scrollLeft = slider.scrollLeft - 299
   }
 
   const slideRight = () => {
     let slider = document.getElementById('slider')
-    slider.scrollLeft = slider.scrollLeft + 320
+    slider.scrollLeft = slider.scrollLeft + 299
   }
 
   return (
@@ -42,7 +42,8 @@ export default function News() {
       <MdChevronLeft className='cursor-pointer' size={50} onClick={slideLeft} />
       <div id='slider' className=" h-full w-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth">
         {dataArtikel.map((x, i) =>
-          <div style={{maxWidth: '300px'}} className="rounded-lg shadow-lg mr-4 bg-green-lato max-w-sm cursor-pointer inline-block">
+        <>
+          <div style={{maxWidth: '283px'}} className="rounded-lg shadow-lg bg-green-lato max-w-sm cursor-pointer inline-block">
             <picture className="rounded-lg overflow-hidden">
               <img className=" h-52 w-full rounded-t-lg hover:scale-125 ease-in duration-300 rounded-lg" src={x.url} alt="" />
             </picture>
@@ -59,6 +60,10 @@ export default function News() {
               >Selengkapnya</button>
             </div>
           </div>
+          {
+            i + 1 == dataArtikel.length ? <></>: <span className='mr-4'></span> 
+          }
+          </>
         )}
       </div>
       <MdChevronRight className='cursor-pointer' size={50} onClick={slideRight} />

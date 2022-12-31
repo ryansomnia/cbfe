@@ -1,7 +1,6 @@
 import React from 'react'
-import Footer from '../component/Footer'
-import Napbar from '../component/Napbar'
 // import Footer from '../component/Footer'
+// import Napbar from '../component/Napbar'
 
 export default function Tk() {
     return (

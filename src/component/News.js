@@ -37,21 +37,21 @@ export default function News() {
   }
 
   return (
-
+<div className=' bg-white'> 
     <div className='flex items-center m-4'>
       <MdChevronLeft className='cursor-pointer' size={50} onClick={slideLeft} />
-      <div id='slider' className="h-full w-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth">
+      <div id='slider' className=" h-full w-full overflow-x-hidden scroll whitespace-nowrap scroll-smooth">
         {dataArtikel.map((x, i) =>
           <div style={{maxWidth: '300px'}} className="rounded-lg shadow-lg mr-4 bg-green-lato max-w-sm cursor-pointer inline-block">
             <picture className="rounded-lg overflow-hidden">
               <img className=" h-52 w-full rounded-t-lg hover:scale-125 ease-in duration-300 rounded-lg" src={x.url} alt="" />
             </picture>
             <div className="p-6">
-              <h5 style={{color:'#38E571'}} className="text-xl font-medium mb-2 truncate text-center pb-3">{x.judul}</h5>
-              <p className='text-left text-1xl text-white pb-4 truncate pr-2'>{x.isi}</p>
+              <h5 className=" text-yellow text-xl font-medium mb-2 truncate text-left">{x.judul}</h5>
+              <p className='text-left text-1xl text-white pb-3 truncate pr-2'>{x.isi}</p>
               <div className='flex flex-row'>
-                <MdDateRange size={25} color={'#749F82'} />
-                <p className="text-green-text text-base mb-4">{moment(x.tglCreate).format("DD-MM-YYYY")}</p>
+                <MdDateRange size={17} color={'#FFFFFF'} />
+                <p className="text-white text-xs mb-4 ml-2">{moment(x.tglCreate).format("DD-MM-YYYY")}</p>
               </div>
               <button type="button"
                 className="border border-r-8 text-center w-full rounded-md bg-white font-bold py-1 text-green"
@@ -63,6 +63,6 @@ export default function News() {
       </div>
       <MdChevronRight className='cursor-pointer' size={50} onClick={slideRight} />
     </div>
-
+    </div>
   )
 }

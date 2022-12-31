@@ -24,7 +24,7 @@ export default function CarouselNews() {
   }, []);
   return (
 
-    <div style={{position:'relative', backgroundColor:'#ADDDD0'}}>
+    <div className=' relative bg-white'>
       <Carousel
         showIndicators={false}
         infiniteLoop={true}
@@ -37,7 +37,7 @@ export default function CarouselNews() {
       >
         {dataArtikel.map((data) =>
             <div id='divCarousel' className=' mx-5 my-2'>
-              <img src={data.url} style={{width:'100%'}} alt='' id='imgCarousel' className='rounded-lg poster-header object-cover' />
+              <img src={data.url}  alt='' id='imgCarousel' className='rounded-lg poster-header object-cover' />
               {/* <p className='font-bold title-banner'>{data.judul}</p> */}
             </div>
 

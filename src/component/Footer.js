@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className='post' style={{bottom: 0, width: '100%', position: 'fixed'}}>
+        <div className='post' style={{bottom: 0, width: '100%'}}>
 
             {/* FOORTER START */}
             <section className=" bg-white overflow-hidden">

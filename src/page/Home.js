@@ -11,8 +11,8 @@ import Galery from '../component/Galery';
 const Home = () => {
 
   return (
-    <div>
-      <div className="flex flex-col" style={{ paddingTop: '5%' }}>
+    <div className='bg-green'>
+      <div className="flex flex-col " style={{ paddingTop: '5%' }}>
       <CarouselNews />
       <hr className='mt-3 pt-3' />
         <section className='bg-green'>
@@ -30,11 +30,12 @@ const Home = () => {
           </div>
         </section>
 
-        <hr className='mt-3 mt-3' />
-        <h2 className='text-3xl font-bold pt-5 pb-2 pl-5 leading-9 text-center' >BERITA KEGIATAN</h2>
+        <hr className='mt-3 bg-white' />
+        <h2 className='bg-white text-3xl font-bold pt-5 pb-2 pl-5 leading-9 text-center' >BERITA KEGIATAN</h2>
         <News />
-        <hr className='mt-3' />
-        <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
+        <div className='bg-white'>
+        <hr className='mt-3 bg-white' />
+        <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
           <div className="w-full lg:w-6/12 ">
             <img className="w-full h-full" src="/img/TK.JPG" alt="A group of People" />
           </div>
@@ -44,7 +45,9 @@ const Home = () => {
           </div>
         </div>
         <hr />
-        <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
+        </div>
+     <div className=' bg-white'> 
+      <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
           <div className="w-full lg:w-5/12 flex flex-col justify-center">
             <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SD CERDAS BANGSA</h1>
             <p className="font-normal text-base leading-6 text-gray-600 "> SD Cerdas bangsa,
@@ -55,10 +58,12 @@ const Home = () => {
             <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
           </div>
         </div>
+        </div>
+       
         {/* <Youtube/> */}
       </div>
       <hr />
-      <h2 className='text-center text-4xl font-bold pt-5 pb-2' >Gallery</h2>
+      <h2 className='text-center text-4xl font-bold pt-5 pb-2 text-white' >Gallery</h2>
       <Galery />
     </div>
   )

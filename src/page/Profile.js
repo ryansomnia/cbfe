@@ -1,4 +1,6 @@
 import React from "react";
+import Napbar from "../component/Napbar";
+import Footer from "../component/Footer";
 import Galery from "../component/Galery";
 export default function Profile() {
   return (

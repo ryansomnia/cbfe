@@ -1,17 +1,15 @@
 
-import Footer from '../component/Footer'
-import Napbar from '../component/Napbar'
-import CarouselNews from '../component/Carousel'
-import './Home.css'
 import React from "react";
-import News from '../component/News';
+import CarouselNews from '../component/Carousel';
 import Galery from '../component/Galery';
+import News from '../component/News';
+import './Home.css';
 // import Youtube from '../component/Youtube';
 
 const Home = () => {
 
   return (
-    <div className='bg-green'>
+    <div className='bg-green '>
       <div className="flex flex-col " style={{ paddingTop: '5%' }}>
       <CarouselNews />
       <hr className='mt-3 pt-3' />

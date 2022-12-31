@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
-import Napbar from './../component/Napbar'
 import axios from "axios";
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import Swal from 'sweetalert2'
-import Footer from '../component/Footer';
-
+import Swal from 'sweetalert2';
+import './PPDB.css'
 
 
 export default function PPDB() {
@@ -50,7 +48,7 @@ export default function PPDB() {
 
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col pt-10 paddinge'>
       <h1 className='mt-3 self-center text-3xl text-black	font-medium'>Formulir Registrasi</h1>
       <div className='my-5 mx-5 flex flex-col'>
         <form className=" w-full max-w-2xl self-center">

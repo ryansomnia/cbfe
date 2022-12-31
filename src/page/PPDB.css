@@ -1,0 +1,13 @@
+@media only screen and (max-width: 600px) {
+    .paddinge {
+      padding-top: 20%;
+    }
+  }
+  
+  @media (min-width:1281px) {
+    .paddinge {
+      padding-top: 5%;
+      padding-bottom: 20%;
+    }
+    
+  }

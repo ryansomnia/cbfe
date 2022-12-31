@@ -29,8 +29,8 @@ export default function DetailArtikel() {
   return (
 
 
-    <div style={{paddingTop: '10%'}}>
-      <section className="pt-3 pb-36  overflow-hidden ">
+    <div className={style.paddinge}>
+      <section className="pt-3 pb-36  overflow-hidden">
         {dataArtikel.map((artikel) =>
           <div className="container px-4 py-2 mx-auto">
             <p className={style.titleArtikel}>{artikel.judul}</p>

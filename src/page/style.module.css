@@ -14,7 +14,19 @@
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  .paddinge {
+    padding-top: 10%;
+  }
 }
+
+@media (min-width:1281px) {
+  .paddinge {
+    padding-top: 3%;
+    padding-bottom: 6%;
+  }
+  
+}
+
 
 .titleArtikel {
   font-size: 25px;

@@ -7,8 +7,8 @@ export default function Footer() {
             {/* FOORTER START */}
             <section className=" bg-white overflow-hidden">
                     <hr/>
-                <div className="container px-4 mx-auto">
-                    <div className="flex flex-wrap justify-between items-center py-6 -m-4">
+                <div className="container mx-auto">
+                    <div className="flex flex-wrap justify-between items-center ">
 
                         <div className="w-auto p-2">
                             <p className="text-sm text-gray-600 font-medium">Copyright &copy; {(new Date().getFullYear())} Yayasan Cerdas Bangsa. All Rights Reserved</p>

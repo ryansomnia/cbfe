@@ -51,7 +51,7 @@ export default function Navbar() {
           }`}
         >
 
-          {screenWidth > 600 ? 
+          {screenWidth < 600 ? 
             <ul>
               <li>
                 <NavLink to="/" onClick={menuToggleHandler}>Home</NavLink >

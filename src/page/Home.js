@@ -9,11 +9,10 @@ import './Home.css';
 const Home = () => {
 
   return (
-    <div className='bg-green '>
+    <div>
       <div className="flex flex-col " style={{ paddingTop: '5%' }}>
       <CarouselNews />
-      <hr className='mt-3 pt-3' />
-        <section className='bg-green'>
+        <section className='bg-green mt-5'>
           <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-4 mt-0">
             <div className="w-full lg:w-4/12">
               <img style={{ borderRadius: '10px' }} className="w-full h-full" src="img/SD.JPG" alt="A group of People" />
@@ -28,8 +27,8 @@ const Home = () => {
           </div>
         </section>
 
-        <hr className='mt-3 bg-white' />
         <h2 className='bg-white text-3xl font-bold pt-5 pb-2 pl-5 leading-9 text-center' >BERITA KEGIATAN</h2>
+        <hr className='mt-3 bg-white' />
         <News />
         <div className='bg-white'>
         <hr className='mt-3 bg-white' />
@@ -61,7 +60,7 @@ const Home = () => {
         {/* <Youtube/> */}
       </div>
       <hr />
-      <h2 className='text-center text-4xl font-bold pt-5 pb-2 text-white' >Gallery</h2>
+      <h2 className='text-center text-4xl font-bold pt-5 pb-6 text-black' >Gallery</h2>
       <Galery />
     </div>
   )

@@ -29,7 +29,7 @@ export default function DetailArtikel() {
   return (
 
 
-    <div>
+    <div style={{paddingTop: '10%'}}>
       <section className="pt-3 pb-36  overflow-hidden ">
         {dataArtikel.map((artikel) =>
           <div className="container px-4 py-2 mx-auto">
@@ -47,7 +47,6 @@ export default function DetailArtikel() {
           </div>
         )}
       </section>
-      <Footer />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import Galery from "../component/Galery";
 export default function Profile() {
   return (
     <div className="flex flex-col pt-5">
-      <div className=" mx-24 my-5 flex flex-col lg:flex-row justify-between gap-8 ">
+      <div className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0 pt-4">
       
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
                 <h1 className="text-4xl  lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SEKILAS TENTANG YAYASAN
@@ -27,9 +27,9 @@ Sedangkan SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin
             </div>
            
         </div>
-        <div className=" mx-24 my-5 flex flex-col lg:flex-row justify-between gap-8 ">
+        <div className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
       <div className="w-full lg:w-6/12 ">
-                <img className="w-full h-full" src="img/GEMARMEMBACA.JPG" alt="A group of People" />
+                <img className="w-full h-full pt-4" src="img/GEMARMEMBACA.JPG" alt="A group of People" />
             </div>
             <div className="w-full lg:w-5/12 flex flex-col justify-center">
                 {/* <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">Sejarah</h1> */}
@@ -42,11 +42,9 @@ Sedangkan SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin
             </div>
            
         </div>
-        
-        
-        
-        
+        <div className="pt-5">
      <Galery/>
+        </div>
     </div>
   );
 }

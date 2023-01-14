@@ -32,7 +32,7 @@ const Home = () => {
         <News />
         <div className='bg-white'>
         <hr className='mt-3 bg-white' />
-        <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
+        <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
           <div className="w-full lg:w-6/12 ">
             <img className="w-full h-full" src="/img/TK.JPG" alt="A group of People" />
           </div>

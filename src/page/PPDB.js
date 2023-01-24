@@ -67,6 +67,7 @@ export default function PPDB() {
                 Jenis Registrasi
               </label>
               <select name="jenisRegis" onChange={handleOnChange} className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+              <option value="-">Silahkan pilih</option>
                 <option value="TK">TK</option>
                 <option value="SD">SD</option>
               </select>
@@ -80,6 +81,7 @@ export default function PPDB() {
                 Jenis Kelamin
               </label>
               <select name="jenisKelamin" onChange={handleOnChange} className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+              <option value="-">Silahkan pilih</option>
                 <option value="lakiLaki">Laki-Laki</option>
                 <option value="perempuan">Perempuan</option>
               </select>
@@ -109,6 +111,7 @@ export default function PPDB() {
                 name="agama"
                 onChange={handleOnChange}
                 className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
+                <option value="-">Silahkan pilih</option>
                 <option value="Protestan">Protestan</option>
                 <option value="Katolik">Katolik</option>
                 <option value="Budha">Budha</option>

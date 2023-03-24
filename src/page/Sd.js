@@ -52,7 +52,7 @@ export default function Sd() {
 
                 </div>
             </section>
-            <section class="text-gray-600 body-font mt-10">
+            {/* <section class="text-gray-600 body-font mt-10">
                 <div class="container px-5 mx-auto">
                     <div class="text-center mb-10">
                     <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
@@ -122,7 +122,7 @@ export default function Sd() {
 </div>
 
                 </div>
-            </section>
+            </section> */}
             <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
                 <div class="text-center pb-12">
                     {/* <h2 class="text-base font-bold text-indigo-600">
@@ -249,6 +249,61 @@ export default function Sd() {
                         <div class="text-center">
                             <p class="text-xl text-gray-700 font-bold mb-2">Herodes Lenamah, S.Th</p>
                             <p class="text-base text-gray-400 font-normal">Guru Pendidikan Agama Kristen</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-white text-gray-900 body-font mt-5">
+                <div class="container px-5 mx-auto py-5">
+                    <div class="text-center mb-10">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4 ">Fasilitas SD Cerdas Bangsa</h1>
+                        {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Berikut Struktur Organisasi dari TK Cerdas Bangsa</p> */}
+                        <div class="flex mt-6 justify-center">
+                            <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+
+
+                        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                            <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                                <img className='h-44 w-72 rounded-md' src='/img/lt3.JPG' alt=''></img>
+                            </div>
+                            <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Hall Lantai 3</h4>
+                            {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
+                        </div>
+                        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                            <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                                <img className='h-44 w-72 rounded-md' src='/img/perpus.JPG' alt=''></img>
+                            </div>
+                            <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Perpustakaan</h4>
+                            {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p> */}
+                        </div>
+                        <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                            <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                                <img className='h-44 w-72 rounded-md' src='/img/lapangan.JPG' alt=''></img>
+                            </div>
+                            <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Lapangan Olah Raga</h4>
+                            {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
+                        </div>
+
+
+                        <div class="p-4 md:w-1/2 flex flex-col text-center items-center">
+                            <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                                <img className='h-44 w-72 rounded-md' src='/img/ruangkomputer.JPG' alt=''></img>
+                            </div>
+                            <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">Lab Komputer</h4>
+                            {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Guru TK B</p> */}
+                        </div>
+                        <div class="p-4 md:w-1/2 flex flex-col text-center items-center">
+                            <div className="bg-indigo-100 h-44 w-72 rounded-md  inline-flex items-center justify-center flex-shrink-0">
+                                <img className='h-44 w-72 rounded-md' src='img/uks.JPG' alt=''></img>
+                            </div>
+                            <h4 class="sm:text-xl text-2xl font-medium title-font mt-2 text-gray-900">UKS</h4>
+                            {/* <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Kepala Sekolah</p> */}
                         </div>
                     </div>
                 </div>

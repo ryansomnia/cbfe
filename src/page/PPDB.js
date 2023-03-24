@@ -9,7 +9,7 @@ export default function PPDB() {
 
   const navigate = useNavigate();
 
-  const api = "http://89.116.228.164:3014/register/registerData"
+  const api = "http://31.220.6.60:3014/register/registerData"
 
   const [posts, setPosts] = useState({});
 

@@ -12,7 +12,7 @@ export default function DetailArtikel() {
   const location = useLocation();
 
   useEffect(() => {
-    const api = `http://89.116.228.164:3014/artikel/getOneNews`;
+    const api = `http://31.220.6.60:3014/artikel/getOneNews`;
     const getData = async () => {
       try {
         let id = location.state.id;

@@ -13,8 +13,14 @@ export default function CarouselNews() {
     const api = `http://31.220.6.60:3014/artikel/getCarousel`;
 
     const getData = async (e) => {
+      const config = {
+        headers: {
+          "Referer": "https://www.scrapingbee.com/",
+          "Referrer-Policy": "strict-origin-when-cross-origin"
+        },
+      };
       try {
-        let res = await axios.get(api);
+        let res = await axios.get(api, config);
         setDataArtikel(res.data);
       } catch (err) {
       }

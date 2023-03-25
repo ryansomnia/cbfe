@@ -15,8 +15,7 @@ export default function CarouselNews() {
     const getData = async (e) => {
       const config = {
         headers: {
-          "Referer": "https://www.scrapingbee.com/",
-          "Referrer-Policy": "strict-origin-when-cross-origin"
+          "Referrer-Policy": "unsafe-url"
         },
       };
       try {

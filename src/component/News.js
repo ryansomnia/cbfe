@@ -12,7 +12,7 @@ export default function News() {
 
   useEffect(() => {
 
-    const api = `http://31.220.6.60:3014/artikel/getNews`;
+    const api = `https://sekolahcerdasbangsa.sch.id/api/artikel/getNews`;
 
     const getData = async (e) => {
       try {

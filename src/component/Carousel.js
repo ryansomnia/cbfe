@@ -10,7 +10,7 @@ export default function CarouselNews() {
 
   useEffect(() => {
 
-    const api = `http://31.220.6.60:3014/artikel/getCarousel`;
+    const api = `https://sekolahcerdasbangsa.sch.id/api/artikel/getCarousel`;
 
     const getData = async (e) => {
       const config = {

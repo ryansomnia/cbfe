@@ -12,7 +12,7 @@ export default function DetailArtikel() {
   const location = useLocation();
 
   useEffect(() => {
-    const api = `http://31.220.6.60:3014/artikel/getOneNews`;
+    const api = `https://sekolahcerdasbangsa.sch.id/api/artikel/getOneNews`;
     const getData = async () => {
       try {
         let id = location.state.id;

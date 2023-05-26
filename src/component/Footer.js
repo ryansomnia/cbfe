@@ -16,7 +16,7 @@ export default function Footer() {
                         <div className="w-auto p-4">
                             <div className="flex flex-wrap -m-4">
                                 <div className="w-auto p-4">
-                                    <a className="text-blueGray-400 hover:text-blueGray-500" href="facebook.com/profile.php?id=100092733643908">
+                                    <a className="text-blueGray-400 hover:text-blueGray-500" href="https://facebook.com/profile.php?id=100092733643908">
                                         <svg width="9" height="16" viewbox="0 0 9 16" fill="none">
                                             <path d="M5.68503 5.32446L5.68503 3.82446C5.68503 3.17446 5.84293 2.82446 6.94819 2.82446H8.31661V0.324463L6.21135 0.324463C3.57977 0.324463 2.52714 1.97446 2.52714 3.82446V5.32446H0.421875L0.421875 7.82446H2.52714L2.52714 15.3245H5.68503L5.68503 7.82446H8.00082L8.31661 5.32446H5.68503Z" fill="currentColor"></path>
                                         </svg>

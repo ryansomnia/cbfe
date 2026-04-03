@@ -1,69 +1,144 @@
-
 import React from "react";
 import CarouselNews from '../component/Carousel';
 import Galery from '../component/Galery';
 import News from '../component/News';
-import './Home.css';
-// import Youtube from '../component/Youtube';
 
 const Home = () => {
-
   return (
-    <div>
-      <div className="flex flex-col " style={{ paddingTop: '5%' }}>
-      <CarouselNews />
-        <section className='bg-green mt-5'>
-          <div id="sejarah" className=" mx-12 flex flex-col lg:flex-row justify-between gap-4 mt-0">
-            <div className="w-full lg:w-4/12">
-              <img style={{ borderRadius: '10px' }} className="w-full h-full" src="img/SD.JPG" alt="A group of People" />
-            </div>
-            <div className="w-full lg:w-5/12 flex flex-col justify-center">
-              <h1 className="text-3xl lg:text-4xl font-bold text-white pb-3">Selamat Datang </h1>
-              <p className="font-normal text-base leading-6 text-white pb-4">Kami sangat menyambut para visitor yang sudah mau berkunjung ke website kami.
-                Pertama tama kami mau memperkenalkan Sekolah Cerdas Bangsa ,sekolah yang berbasis Sekolah Kristen yang ada di Bogor dengan TK yang TERAKREDITASI B dan SD yang TERAKREDITASI A.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-        <h2 className='bg-white text-3xl font-bold pt-5 pb-2 pl-5 leading-9 text-center' >BERITA KEGIATAN</h2>
-        <hr className='mt-3 bg-white' />
-        <News />
-        <div className='bg-white'>
-        <hr className='mt-3 bg-white' />
-        <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
-          <div className="w-full lg:w-6/12 ">
-            <img className="w-full h-full" src="/img/TK.JPG" alt="A group of People" />
-          </div>
-          <div className="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">TK CERDAS BANGSA</h1>
-            <p className="font-normal text-base leading-6 text-gray-600 ">TK Cerdas Bangsa adalah pendidikan yang berbasis anak usia dini dengan dasar agama Kristen yang bertujuan untuk mendidik karakter anak - anak sejak usia dini, dengan fokus pengajaran kepada pengembangan kognitif, sosial emosional, fisik motorik dan materi pengetahuan lain yang disesuaikan dengan usia dini dan dikembangkan oleh guru - guru TK Cerdas Bangsa yang telah berpengalaman di bidangnya.</p>
+    <div className="bg-white">
+      {/* HERO */}
+      <section className="pt-16 relative">
+        <CarouselNews />
+        {/* Overlay CTA */}
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Sekolah Cerdas Bangsa
+            </h1>
+            <p className="text-sm md:text-lg mb-6">
+              Mendidik generasi unggul dengan karakter dan iman
+            </p>
+            {/* <a
+              href="/ppdb"
+              className="bg-primary-500 hover:bg-primary-600 px-6 py-3 rounded-full font-semibold shadow-lg transition"
+            >
+              Daftar Sekarang
+            </a> */}
           </div>
         </div>
-        <hr />
+      </section>
+
+      {/* STATS
+      <section className="bg-primary-50 py-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {["500+ Siswa", "30+ Guru", "Akreditasi A", "Sejak 2007"].map((item, i) => (
+            <div key={i} className="bg-white p-4 rounded-xl shadow">
+              <p className="text-primary-600 font-bold text-lg">{item}</p>
+            </div>
+          ))}
         </div>
-     <div className=' bg-white'> 
-      <div id="sejarah" className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
-          <div className="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SD CERDAS BANGSA</h1>
-            <p className="font-normal text-base leading-6 text-gray-600 "> SD Cerdas bangsa,
-              SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Kabupaten Bogor Nomor : 421.2/243-Disdik/2010. Dengan Akreditasi A. Dan didirikan oleh Bapak Hendrawan. Tujuan didirikannya SD Cerdas Bangsa ini adalah untuk ikut berperan aktif mencerdaskan kehidupan bangsa dan negara khususnya di bidang pendidikan. Serta memajukan Desa cimandala dengan sarana pendidikan Sekolah Dasar.
+      </section> */}
+
+      {/* INTRO */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div className="overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="/img/SD.JPG"
+              alt="Sekolah"
+              className="w-full h-[250px] md:h-[350px] object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-primary-600">
+              Selamat Datang
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+              Kami sangat menyambut para visitor yang sudah berkunjung ke website kami. Sekolah Cerdas Bangsa merupakan sekolah berbasis Kristen di Bogor dengan TK terakreditasi B dan SD terakreditasi A.
             </p>
           </div>
-          <div className="w-full lg:w-6/12 ">
-            <img className="w-full h-full" src="/img/SD.JPG" alt="A group of People" />
+        </div>
+      </section>
+
+      {/* NEWS */}
+      <section className="py-12 bg-primary-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-primary-600">
+            Berita Kegiatan
+          </h2>
+          <News />
+        </div>
+      </section>
+
+      {/* TK SECTION */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div className="overflow-hidden rounded-2xl shadow">
+            <img
+              src="/img/TK.JPG"
+              alt="TK"
+              className="w-full h-[250px] md:h-[350px] object-cover"
+            />
+          </div>
+
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary-600">
+              TK CERDAS BANGSA
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+              Pendidikan anak usia dini berbasis Kristen yang berfokus pada perkembangan kognitif, sosial emosional, dan motorik anak.
+            </p>
           </div>
         </div>
-        </div>
-       
-        {/* <Youtube/> */}
-      </div>
-      <hr />
-      <h2 className='text-center text-4xl font-bold pt-5 pb-6 text-black' >Gallery</h2>
-      <Galery />
-    </div>
-  )
-}
+      </section>
 
-export default Home
+      {/* SD SECTION */}
+      <section className="py-12 bg-primary-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary-600">
+              SD CERDAS BANGSA
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base">
+              SD Cerdas Bangsa berdiri sejak 2007 dengan akreditasi A, bertujuan mencerdaskan kehidupan bangsa melalui pendidikan berkualitas.
+            </p>
+          </div>
+
+          <div className="order-1 md:order-2 overflow-hidden rounded-2xl shadow">
+            <img
+              src="/img/SD.JPG"
+              alt="SD"
+              className="w-full h-[250px] md:h-[350px] object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 text-primary-600">
+            Gallery
+          </h2>
+          <Galery />
+        </div>
+      </section>
+
+      {/* CTA BOTTOM */}
+      <section className="bg-primary-500 py-12 text-center text-white">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          Siap Bergabung Bersama Kami?
+        </h2>
+        <a
+          href="/ppdb"
+          className="bg-white text-primary-600 px-6 py-3 rounded-full font-semibold shadow hover:bg-gray-100 transition"
+        >
+          Daftar Sekarang
+        </a>
+      </section>
+    </div>
+  );
+};
+
+export default Home;

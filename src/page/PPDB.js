@@ -2,156 +2,107 @@ import axios from "axios";
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
-import './PPDB.css'
-
 
 export default function PPDB() {
-
   const navigate = useNavigate();
-
-  const api = "https://sekolahcerdasbangsa.sch.id/api/register/registerData"
+  const api = "https://api.sekolahcerdasbangsa.sch.id/api/register/registerData";
 
   const [posts, setPosts] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const postData = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(api, posts)
+      setLoading(true);
+      await axios.post(api, posts);
 
       Swal.fire({
-        position: 'top-end',
         icon: 'success',
-        title: `Registrasi Berhasil`,
-        text: `Silahkan datang ke Cerdas Bangsa untuk Step selanjutnya`,
-        showConfirmButton: false,
-        timer: 1500
-      })
-      navigate("/")
+        title: 'Registrasi Berhasil',
+        text: 'Silahkan datang ke sekolah untuk langkah selanjutnya',
+        timer: 1500,
+        showConfirmButton: false
+      });
 
+      navigate("/");
     } catch (err) {
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Registrasi gagal !'
-      })
+        text: 'Registrasi gagal!'
+      });
+    } finally {
+      setLoading(false);
     }
-  }
+  };
 
   const handleOnChange = (e) => {
-    e.preventDefault()
-    setPosts(prev => {
-      prev[e.target.name] = e.target.value
-      return prev
-    })
-  }
+    const { name, value } = e.target;
+    setPosts(prev => ({ ...prev, [name]: value }));
+  };
 
-
+  const inputClass = "w-full bg-gray-100 border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-500 transition";
 
   return (
-    <div className='flex flex-col pt-10 paddinge'>
-      <h1 className='mt-3 self-center text-3xl text-black	font-medium'>Formulir Registrasi</h1>
-      <div className='my-5 mx-5 flex flex-col'>
-        <form className=" w-full max-w-2xl self-center">
-          <div className="flex flex-wrap -mx-3 mb-2">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                Nama Lengkap
-              </label>
-              <input
-                name="namaLengkap"
-                onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+    <div className="min-h-screen bg-primary-50 py-16 px-4">
+      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-6 md:p-10">
+        <h1 className="text-2xl md:text-3xl font-bold text-center text-primary-600 mb-8">
+          Formulir Pendaftaran
+        </h1>
 
-            </div>
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                Jenis Registrasi
-              </label>
-              <select name="jenisRegis" onChange={handleOnChange} className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
-              <option value="-">Silahkan pilih</option>
-                <option value="TK">TK</option>
-                <option value="SD">SD</option>
-              </select>
-            </div>
-
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-3">
-
-            <div className="w-full md:w-1/3 px-3">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
-                Jenis Kelamin
-              </label>
-              <select name="jenisKelamin" onChange={handleOnChange} className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
-              <option value="-">Silahkan pilih</option>
-                <option value="lakiLaki">Laki-Laki</option>
-                <option value="perempuan">Perempuan</option>
-              </select>
-            </div>
-            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
-                Tanggal Lahir
-              </label>
-              <input name="tanggalLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="date" placeholder="Albuquerque" />
-            </div>
-            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                Tempat Lahir
-              </label>
-              <input name="tempatLahir" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
-
-            </div>
+        <form onSubmit={postData} className="space-y-6">
+          {/* Row 1 */}
+          <div className="grid md:grid-cols-2 gap-4">
+            <input name="namaLengkap" onChange={handleOnChange} placeholder="Nama Lengkap" className={inputClass} />
+            <select name="jenisRegis" onChange={handleOnChange} className={inputClass}>
+              <option value="">Pilih Jenjang</option>
+              <option value="TK">TK</option>
+              <option value="SD">SD</option>
+            </select>
           </div>
 
-          <div className="flex flex-wrap -mx-3 mb-2">
+          {/* Row 2 */}
+          <div className="grid md:grid-cols-3 gap-4">
+            <select name="jenisKelamin" onChange={handleOnChange} className={inputClass}>
+              <option value="">Jenis Kelamin</option>
+              <option value="lakiLaki">Laki-Laki</option>
+              <option value="perempuan">Perempuan</option>
+            </select>
 
-            <div className="w-full md:w-1/4 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
-                Agama
-              </label>
-              <select
-                name="agama"
-                onChange={handleOnChange}
-                className='appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500' >
-                <option value="-">Silahkan pilih</option>
-                <option value="Protestan">Protestan</option>
-                <option value="Katolik">Katolik</option>
-                <option value="Budha">Budha</option>
-                <option value="Hindu">Hindu</option>
-                <option value="Islam">Islam</option>
-                <option value="Konghuchu">Konghuchu</option>
-                <option value="Lain-lain">Lain-lain</option>
-              </select>
-            </div>
-            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                Nomor Handphone
-              </label>
-              <input name="noHandphone" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
+            <input type="date" name="tanggalLahir" onChange={handleOnChange} className={inputClass} />
+            <input name="tempatLahir" onChange={handleOnChange} placeholder="Tempat Lahir" className={inputClass} />
+          </div>
 
-            </div>
-            <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                Asal Sekolah
-              </label>
-              <input name="asalSekolah" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
-            </div>
+          {/* Row 3 */}
+          <div className="grid md:grid-cols-3 gap-4">
+            <select name="agama" onChange={handleOnChange} className={inputClass}>
+              <option value="">Agama</option>
+              <option>Protestan</option>
+              <option>Katolik</option>
+              <option>Budha</option>
+              <option>Hindu</option>
+              <option>Islam</option>
+              <option>Konghuchu</option>
+              <option>Lainnya</option>
+            </select>
+
+            <input name="noHandphone" onChange={handleOnChange} placeholder="Nomor HP" className={inputClass} />
+            <input name="asalSekolah" onChange={handleOnChange} placeholder="Asal Sekolah" className={inputClass} />
           </div>
-          <div className="flex flex-wrap -mx-3 mb-2">
-            <div className="w-full md:w-1/1 px-3 mb-6 md:mb-0">
-              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
-                Alamat
-              </label>
-              <textarea name="alamat" onChange={handleOnChange} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" />
-            </div>
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-2">
-          </div>
-          <div className="flex flex-wrap -mx-3 mb-2">
-          </div>
-          <button onClick={postData} className="my-1 bg-green hover:bg-tea text-white font-bold py-2 px-4 rounded w-full">
-            Register
+
+          {/* Alamat */}
+          <textarea name="alamat" onChange={handleOnChange} placeholder="Alamat Lengkap" className={inputClass + " h-24"} />
+
+          {/* Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 rounded-xl shadow-md transition disabled:opacity-50"
+          >
+            {loading ? "Memproses..." : "Daftar Sekarang"}
           </button>
         </form>
       </div>
     </div>
-  )
+  );
 }

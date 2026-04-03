@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import moment from "moment";
 import style from './style.module.css';
 import axios from "axios";
-import Napbar from './../component/Napbar'
-import Footer from '../component/Footer'
 
 import { useLocation } from 'react-router-dom';
 export default function DetailArtikel() {
@@ -12,20 +10,22 @@ export default function DetailArtikel() {
   const location = useLocation();
 
   useEffect(() => {
-    const api = `https://sekolahcerdasbangsa.sch.id/api/artikel/getOneNews`;
+    const api = `https://api.sekolahcerdasbangsa.sch.id/api/artikel/getOneNews`;
+  
     const getData = async () => {
       try {
-        let id = location.state.id;
+        let id = location.state?.id;
+        if (!id) return;
+  
         let res = await axios.post(api, { id });
-
         setDataArtikel(res.data);
       } catch (err) {
-
+        console.error(err);
       }
     };
-
+  
     getData();
-  }, []);
+  }, [location.state?.id]);
   return (
 
 

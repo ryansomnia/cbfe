@@ -10,7 +10,7 @@ import Profile from "./page/Profile";
 import Tk from "./page/Tk";
 import DetailArtikel from "./page/DetailArtikel";
 import Sd from "./page/Sd";
-import Navbar from "./component/Napbar";
+import Navbar from "./component/NavBar";
 import Footer from "./component/Footer";
 
 export default function App() {

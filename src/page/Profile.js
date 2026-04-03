@@ -1,50 +1,76 @@
 import React from "react";
-import Napbar from "../component/Napbar";
-import Footer from "../component/Footer";
 import Galery from "../component/Galery";
+
 export default function Profile() {
   return (
-    <div className="flex flex-col pt-5">
-      <div className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0 pt-4">
-      
-            <div className="w-full lg:w-5/12 flex flex-col justify-center">
-                <h1 className="text-4xl  lg:text-4xl font-bold leading-9 text-gray-800 pb-4">SEKILAS TENTANG YAYASAN
-</h1>
-                <p className="font-normal text-base leading-6 text-gray-600 ">
-                Yayasan Cerdas Bangsa Merupakan yayasan yang didirikan oleh Bapak Hendrawan selaku Ketua Yayasan. 
-                Yayasan Cerdas Bangsa telah mendirikan TK Cerdas Bangsa pada Tahun 2006 dan SD Cerdas Bangsa pada tahun 2007.
-                Yayasan Cerdas  Bangsa Berdomisili di Cibinong Bogor. 
+    <div className="bg-white">
+      {/* HEADER */}
+      <section className="bg-primary-500 text-white py-12 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold">Profil Yayasan</h1>
+        <p className="mt-2 text-sm md:text-base">
+          Mengenal lebih dekat Yayasan Cerdas Bangsa
+        </p>
+      </section>
 
-</p>
-<p className="font-normal text-base leading-6 text-gray-600 mt-3">
-TK Cerdas Bangsa didirikan pada tanggal 25 Juni 2006 berdasarkan izin diknas Kabupaten Bogor No. 421.1/2160-Disdik/2007 Oktober 2008 dengan akreditasi B. 
-Sedangkan SD Cerdas Bangsa didirikan Pada tanggal 01 Juli 2007, berdasarkan izin diknas Kabupaten Bogor Nomor : 421.2/243-Disdik/2010. Dengan Akreditasi A.
+      {/* SECTION 1 */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
+              Sekilas Tentang Yayasan
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Yayasan Cerdas Bangsa didirikan oleh Bapak Hendrawan sebagai ketua yayasan. Yayasan ini telah mendirikan TK Cerdas Bangsa pada tahun 2006 dan SD Cerdas Bangsa pada tahun 2007 di wilayah Cibinong, Bogor.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              TK Cerdas Bangsa memiliki akreditasi B, sedangkan SD Cerdas Bangsa memiliki akreditasi A. Keduanya berdiri dengan tujuan memberikan pendidikan berkualitas bagi generasi muda.
+            </p>
+          </div>
 
- </p>
-            </div>
-            <div className="w-full lg:w-6/12 ">
-                <img className="w-full h-full" src="img/gedung.jpeg" alt="A group of People" />
-            </div>
-           
+          <div className="overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="/img/gedung.jpeg"
+              alt="Gedung Sekolah Cerdas Bangsa"
+              className="w-full h-[250px] md:h-[350px] object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
         </div>
-        <div className="mx-12 flex flex-col lg:flex-row justify-between gap-8 mt-0">
-      <div className="w-full lg:w-6/12 ">
-                <img className="w-full h-full pt-4" src="img/GEMARMEMBACA.JPG" alt="A group of People" />
-            </div>
-            <div className="w-full lg:w-5/12 flex flex-col justify-center">
-                {/* <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4">Sejarah</h1> */}
-                <p className="font-normal text-base leading-6 text-gray-600 ">
-                  Direktur Yayasan setiap tahun memberikan dana beasiswa kepada jemaat yang tidak mampu untuk sekolah di luar. Setiap tahun yang di bantu semakin banyak dan dana yang di butuhkan pun semakin besar. Akhirnya Yayasan memiliki ide bagaimana jika mendirikan sekolah sendiri supaya dana yang cukup besar ini tidak perlu keluar ke sekolah lain. 
-</p>
-<p className="font-normal text-base leading-6 text-gray-600 mt-3">
-  Maka didirikanlah sekolah TK Cerdas Bangsa pada tahun 2006 dibawah naungan Yayasan Cerdas Bangsa yang di ketuai oleh bapak Hendrawan. Setahun berjalan orang tua yang lulus menginginkan anaknya lanjut di Sekolah Dasar dengan Yayasan yang sama. Maka didirikan pula SD Cerdas Bangsa pada tahun 2007.
-</p>
-            </div>
-           
+      </section>
+
+      {/* SECTION 2 */}
+      <section className="py-12 bg-primary-50">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div className="order-2 md:order-1">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-600 mb-4">
+              Latar Belakang
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Yayasan awalnya memberikan bantuan beasiswa kepada jemaat yang membutuhkan. Seiring waktu, kebutuhan semakin besar sehingga muncul ide untuk mendirikan sekolah sendiri.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              Dengan berdirinya TK dan SD Cerdas Bangsa, yayasan dapat memberikan pendidikan yang lebih terjangkau dan berkualitas bagi masyarakat sekitar.
+            </p>
+          </div>
+
+          <div className="order-1 md:order-2 overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="/img/GEMARMEMBACA.JPG"
+              alt="Kegiatan membaca siswa"
+              className="w-full h-[250px] md:h-[350px] object-cover hover:scale-105 transition duration-500"
+            />
+          </div>
         </div>
-        <div className="pt-5">
-     <Galery/>
+      </section>
+
+      {/* GALLERY */}
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-primary-600 mb-6">
+            Dokumentasi Kegiatan
+          </h2>
+          <Galery />
         </div>
+      </section>
     </div>
   );
 }

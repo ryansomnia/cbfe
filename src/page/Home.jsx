@@ -1,6 +1,7 @@
 import React from "react";
 import Galery from "../component/Galery";
 import News from "../component/News";
+import CarouselNews from "../component/Carousel";
 import {
   HiOutlineAcademicCap,
   HiOutlineUserGroup,
@@ -10,8 +11,10 @@ import {
 const Home = () => {
   return (
     <div className="bg-white overflow-hidden">
+      
       {/* HERO */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
+        
         {/* Background */}
         <img
           src="/img/gedung.jpeg"
@@ -31,6 +34,7 @@ const Home = () => {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-3xl">
+            
             <p className="uppercase tracking-[7px] text-sky-300 font-semibold mb-6 text-sm">
               Welcome To
             </p>
@@ -64,41 +68,6 @@ const Home = () => {
                 Lihat Profil
               </a>
             </div>
-
-            {/* STATS */}
-            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-16"> */}
-              {/* {[
-                {
-                  title: "500+",
-                  desc: "Siswa",
-                },
-                {
-                  title: "30+",
-                  desc: "Guru",
-                },
-                {
-                  title: "A",
-                  desc: "Akreditasi SD",
-                },
-                {
-                  title: "2007",
-                  desc: "Didirikan",
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white/10 backdrop-blur-xl border border-white/10 rounded-3xl p-5"
-                >
-                  <h3 className="text-3xl font-black text-white mb-1">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-slate-300 text-sm">
-                    {item.desc}
-                  </p>
-                </div>
-              ))} */}
-            {/* </div> */}
           </div>
         </div>
 
@@ -106,12 +75,24 @@ const Home = () => {
         <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-white to-transparent" />
       </section>
 
+      {/* FLOATING CAROUSEL */}
+<section className="relative mt-24 z-20 px-6">
+  <div className="max-w-7xl mx-auto">
+    <div className="rounded-[40px] overflow-hidden shadow-2xl border border-white/20 bg-white min-h-[420px] md:min-h-[650px]">
+      <CarouselNews />
+    </div>
+  </div>
+</section>
+
       {/* INTRO */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+
             {/* IMAGE */}
             <div className="relative">
+              
               <div className="absolute -top-10 -left-10 w-56 h-56 bg-sky-100 rounded-full blur-3xl opacity-70" />
 
               <div className="relative overflow-hidden rounded-[32px] shadow-2xl">
@@ -125,6 +106,7 @@ const Home = () => {
 
             {/* CONTENT */}
             <div>
+
               <p className="uppercase tracking-[6px] text-sky-500 font-semibold mb-4">
                 Tentang Kami
               </p>
@@ -149,6 +131,7 @@ const Home = () => {
 
               {/* FEATURES */}
               <div className="grid sm:grid-cols-3 gap-5">
+
                 <div className="bg-slate-50 rounded-3xl p-6 hover:shadow-xl transition duration-300">
                   <div className="w-14 h-14 rounded-2xl bg-sky-100 flex items-center justify-center mb-5">
                     <HiOutlineAcademicCap className="text-3xl text-sky-500" />
@@ -190,19 +173,24 @@ const Home = () => {
                     Mengembangkan potensi anak
                   </p>
                 </div>
+
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* NEWS */}
       <section className="py-24 bg-slate-50 relative overflow-hidden">
+
         {/* Glow */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sky-100 rounded-full blur-3xl opacity-40" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
+
           <div className="text-center mb-14">
+
             <p className="uppercase tracking-[6px] text-sky-500 font-semibold mb-4">
               News
             </p>
@@ -215,85 +203,20 @@ const Home = () => {
               Informasi terbaru mengenai kegiatan dan
               aktivitas siswa di Sekolah Cerdas Bangsa.
             </p>
+
           </div>
 
           <News />
-        </div>
-      </section>
 
-      {/* TK */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* IMAGE */}
-            <div className="overflow-hidden rounded-[32px] shadow-2xl">
-              <img
-                src="/img/TK.JPG"
-                alt="TK Cerdas Bangsa"
-                className="w-full h-[550px] object-cover hover:scale-105 transition duration-700"
-              />
-            </div>
-
-            {/* CONTENT */}
-            <div>
-              <p className="uppercase tracking-[6px] text-sky-500 font-semibold mb-4">
-                TK Cerdas Bangsa
-              </p>
-
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
-                Pendidikan Anak Usia Dini
-              </h2>
-
-              <p className="text-slate-600 leading-relaxed text-lg">
-                Pendidikan anak usia dini berbasis Kristen
-                yang berfokus pada perkembangan kognitif,
-                sosial emosional, kreativitas, dan motorik
-                anak dalam lingkungan yang nyaman dan
-                menyenangkan.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SD */}
-      <section className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* CONTENT */}
-            <div className="order-2 lg:order-1">
-              <p className="uppercase tracking-[6px] text-sky-500 font-semibold mb-4">
-                SD Cerdas Bangsa
-              </p>
-
-              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
-                Pendidikan Dasar Berkualitas
-              </h2>
-
-              <p className="text-slate-600 leading-relaxed text-lg">
-                Berdiri sejak tahun 2007 dengan akreditasi A,
-                SD Cerdas Bangsa berkomitmen memberikan
-                pendidikan terbaik untuk membentuk generasi
-                yang unggul secara akademik maupun karakter.
-              </p>
-            </div>
-
-            {/* IMAGE */}
-            <div className="order-1 lg:order-2 overflow-hidden rounded-[32px] shadow-2xl">
-              <img
-                src="/img/SD.JPG"
-                alt="SD Cerdas Bangsa"
-                className="w-full h-[550px] object-cover hover:scale-105 transition duration-700"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
       {/* GALLERY */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
+
           <div className="text-center mb-14">
+
             <p className="uppercase tracking-[6px] text-sky-500 font-semibold mb-4">
               Gallery
             </p>
@@ -306,14 +229,17 @@ const Home = () => {
               Beberapa momen kegiatan siswa dan aktivitas
               pembelajaran di Sekolah Cerdas Bangsa.
             </p>
+
           </div>
 
           <Galery />
+
         </div>
       </section>
 
       {/* CTA */}
       <section className="relative py-24 overflow-hidden">
+
         {/* Background */}
         <img
           src="/img/gedung.jpeg"
@@ -326,6 +252,7 @@ const Home = () => {
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
+
           <p className="uppercase tracking-[6px] text-sky-300 font-semibold mb-4">
             Join With Us
           </p>
@@ -348,8 +275,10 @@ const Home = () => {
           >
             Daftar Sekarang
           </a>
+
         </div>
       </section>
+
     </div>
   );
 };

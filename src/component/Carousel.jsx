@@ -41,10 +41,10 @@ export default function CarouselNews() {
           >
             {/* IMAGE */}
             <img
-              src={data.url}
-              alt={data.judul}
-              className="h-[250px] md:h-[500px] w-full object-cover"
-            />
+  src={data.url}
+  alt={data.judul}
+  className="h-[420px] md:h-[650px] w-full object-cover"
+ />
 
             {/* OVERLAY */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

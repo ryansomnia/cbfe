@@ -61,13 +61,13 @@ export default function News() {
                 </p>
               </div>
   
-              <h3 className="text-xl font-bold text-slate-800 line-clamp-2 mb-3">
-                {x.judul}
-              </h3>
-  
-              <p className="text-slate-600 line-clamp-3 mb-5">
-                {x.isi}
-              </p>
+              <h3 className="text-xl font-bold text-slate-800 mb-3 hover:text-blue-600 transition">
+  {x.judul}
+</h3>
+             
+              <p className="text-slate-500 text-sm leading-7 mb-5">
+  {x.isi?.substring(0, 110)}...
+</p>
   
               <button
                 onClick={() =>

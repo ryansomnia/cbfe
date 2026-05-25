@@ -10,7 +10,7 @@ export default function DetailArtikel() {
   const location = useLocation();
 
   useEffect(() => {
-    const api = `https://api.sekolahcerdasbangsa.sch.id/api/artikel/getOneNews`;
+    const api = `https://api.sekolahcerdasbangsa.sch.id/artikel/getOneNews`;
   
     const getData = async () => {
       try {

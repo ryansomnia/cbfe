@@ -12,7 +12,7 @@ export default function PPDB() {
   const navigate = useNavigate();
 
   const api =
-    "https://api.sekolahcerdasbangsa.sch.id/api/register/registerData";
+    "https://api.sekolahcerdasbangsa.sch.id/register/registerData";
 
   const [posts, setPosts] = useState({});
   const [loading, setLoading] = useState(false);
